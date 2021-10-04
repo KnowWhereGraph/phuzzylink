@@ -195,96 +195,96 @@ html(lang='en')
 						span.text Incoming Triples
 					.body.incoming
 						.table
-
-		.stay-informed
-			.container
-				form#stay-informed-form(method='post' name='stayInformedForm')
+		.bottom
+			.stay-informed
+				.container
+					form#stay-informed-form(method='post' name='stayInformedForm')
+						.row
+							.col-sm-5
+								h4 Stay Informed
+							#stay_informed_captcha_container
+							.col-sm-5
+								input#stayInformedEmail(type='text' placeholder='Email' required='')
+							.col-sm-2
+								input#stayInformedBtn.btn.btn-primary(type='submit' value='Submit')
+			footer.footer.footer-menu
+				.container(style='max-width:1200px;')
 					.row
-						.col-sm-5
-							h4 Stay informed about KnowWhereGraph
-						#stay_informed_captcha_container
-						.col-sm-5
-							input#stayInformedEmail(type='text' placeholder='Email' required='')
-						.col-sm-2
-							input#stayInformedBtn.btn.btn-primary(type='submit' value='Submit')
-		footer.footer.footer-menu
-			.container(style='max-width:1200px;')
-				.row
-					.col-xs-3.col-sm-3.left-one
-						#navigation
-							// <label>Navigation</label>
-							ul#site.site_menu
-								li
-									a(href='#')
-										img.logo(src='/images/kwg.png' width="300" height="90")
-								li
-									p(style='font-size:18px; text-align:center;')
-										a(href='#' target='_blank') &copy; KnowWhereGraph
-					.col-xs-7.col-sm-7.middle-one
-						#text1
-							ul.site_menu(id='site site_text' style='list-style:none')
-								li
-									p.ld-connect-text(style='line-height:1.4em; text-align:left;')
-										b Expert System
-										|	is the platform to manage experts and their expertises. It is 
-										br    
-										|   supported by technologies of linked data and machine learning.
-						#text2
-							// <label>Text 2</label>
-							//-.footer-column.site-map(style='padding:2px')
-							.col-sm-3.site-map(style="padding:2px")
-								ul(style='list-style:none')
+						.col-xs-3.col-sm-3.left-one
+							#navigation
+								// <label>Navigation</label>
+								ul#site.site_menu
 									li
-										strong About
+										a(href='#')
+											img.logo(src='/images/kwg.png' width="300" height="90")
 									li
-										a(href='/#About' target='_blank') About LD Connect
-		
-							//-.footer-column.site-map(style='padding:2px')
-							.col-sm-3.site-map(style="padding:2px")
+										p(style='font-size:18px; text-align:center;')
+											a(href='#' target='_blank') &copy; KnowWhereGraph
+						.col-xs-7.col-sm-7.middle-one
+							#text1
+								ul.site_menu(id='site site_text' style='list-style:none')
+									li
+										p.ld-connect-text(style='line-height:1.4em; text-align:left;')
+											b Expert System
+											|	is the platform to manage experts and their expertises. It is 
+											br    
+											|   supported by technologies of linked data and machine learning.
+							#text2
+								// <label>Text 2</label>
+								//-.footer-column.site-map(style='padding:2px')
+								.col-sm-3.site-map(style="padding:2px")
+									ul(style='list-style:none')
+										li
+											strong About
+										li
+											a(href='/#About' target='_blank') About LD Connect
+			
+								//-.footer-column.site-map(style='padding:2px')
+								.col-sm-3.site-map(style="padding:2px")
 
-								ul(style='list-style:none')
-									li
-										strong Explore
-									li
-										a(href='/browse/#kwg-ont:ExpertiseTopic' style='text-decoration: none; cursor: pointer;') Explore from Expertise
-									li
-										a(href='/browse/#kwg-ont:Place' style='text-decoration: none; cursor: pointer;') Explore from Place
-									li
-										a(href='/browse/#kwg-ont:Hazard ' style='text-decoration: none; cursor: pointer;') Explore from Hazard
-							//-.footer-column.site-map(style='padding:2px')
-							.col-sm-3.site-map(style="padding:2px")
+									ul(style='list-style:none')
+										li
+											strong Explore
+										li
+											a(href='/browse/#kwg-ont:ExpertiseTopic' style='text-decoration: none; cursor: pointer;') Explore from Expertise
+										li
+											a(href='/browse/#kwg-ont:Place' style='text-decoration: none; cursor: pointer;') Explore from Place
+										li
+											a(href='/browse/#kwg-ont:Hazard ' style='text-decoration: none; cursor: pointer;') Explore from Hazard
+								//-.footer-column.site-map(style='padding:2px')
+								.col-sm-3.site-map(style="padding:2px")
 
-								ul(style='list-style:none')
-									li
-										strong Tools
-									li
-										a(href='http://stko-roy.geog.ucsb.edu:3040/dataset.html?tab=query&ds=/direct-relief-mobility-network-new' target='_blank' style='cursor: pointer;') Query Interface
-									li
-										a(href='http://stko-roy.geog.ucsb.edu:3005' target='_blank' style='cursor: pointer;') Similarity Interface
+									ul(style='list-style:none')
+										li
+											strong Tools
+										li
+											a(href='http://stko-roy.geog.ucsb.edu:3040/dataset.html?tab=query&ds=/direct-relief-mobility-network-new' target='_blank' style='cursor: pointer;') Query Interface
+										li
+											a(href='http://stko-roy.geog.ucsb.edu:3005' target='_blank' style='cursor: pointer;') Similarity Interface
 
-							// .footer-column.site-map(style='padding:2px')
-							// 	ul
-							// 		li
-							// 			strong Download
-							// 		li
-							// 			a(href='/#downloadDataset' target='_blank' style='cursor: pointer;') Download Dataset
-							// 		li
-							// 			a(href='/#downloadEmbeddings' target='_blank' style='cursor: pointer;') Download Doc2Vec
+								// .footer-column.site-map(style='padding:2px')
+								// 	ul
+								// 		li
+								// 			strong Download
+								// 		li
+								// 			a(href='/#downloadDataset' target='_blank' style='cursor: pointer;') Download Dataset
+								// 		li
+								// 			a(href='/#downloadEmbeddings' target='_blank' style='cursor: pointer;') Download Doc2Vec
 
-							//-.footer-column.site-map(style='padding:2px')
-							.col-sm-3.site-map(style="padding:2px")
+								//-.footer-column.site-map(style='padding:2px')
+								.col-sm-3.site-map(style="padding:2px")
+									ul(style='list-style:none')
+										li
+											strong Contact
+										li
+											a(href='mailto:ruizhu@geog.ucsb.edu' style='cursor: pointer;') Contact Us
+										li
+											a(href='/#feedback' target='_blank' style='cursor: pointer;') Feedback
+						.col-xs-2.col-sm-2.right-one
+							#navigation
+								ul(style='list-style:none; padding-top: 35px;')
+									li(style='float: none;')
+										p.powered-by Funded by 
 								ul(style='list-style:none')
-									li
-										strong Contact
-									li
-										a(href='mailto:ruizhu@geog.ucsb.edu' style='cursor: pointer;') Contact Us
-									li
-										a(href='/#feedback' target='_blank' style='cursor: pointer;') Feedback
-					.col-xs-2.col-sm-2.right-one
-						#navigation
-							ul(style='list-style:none; padding-top: 35px;')
-								li(style='float: none;')
-									p.powered-by Funded by 
-							ul(style='list-style:none')
-								li(style='float: none;')
-									img(src='/images/nsf_ca.png' width="300" height="80")
+									li(style='float: none;')
+										img(src='/images/nsf_ca.png' width="300" height="80")
