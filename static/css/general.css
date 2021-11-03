@@ -996,6 +996,12 @@ input {
 
 /* loading icon end------------------*/
 
+.bottom {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+}
+
 .stay-informed {
   background: #dbb105;
 }
