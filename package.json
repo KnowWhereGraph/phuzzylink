@@ -52,6 +52,7 @@
     "uglify": "^0.1.5",
     "uglifyify": "^4.0.5",
     "wellknown": "^0.5.0",
-    "worker": "^0.3.12"
+    "worker": "^0.3.12",
+    "webtorrent": "^1.5.8"
   }
 }

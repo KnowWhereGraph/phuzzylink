@@ -47,7 +47,9 @@ const N_PORT = h_argv.p || h_argv.port || 80;
 
 //const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-roy.geog.ucsb.edu:7201/repositories/Expert-Hazard';
 //const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://localhost:3030/Expert-Storm/query';
-const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-roy.geog.ucsb.edu:7202/repositories/KnowWhereGraph-V1';
+//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-roy.geog.ucsb.edu:7202/repositories/KnowWhereGraph-V1';
+//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V2';
+const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V2';
 
 const P_DIR_PLUGINS = path.resolve(__dirname, '../..', 'plugins');
 const P_DIR_FETCH = path.resolve(__dirname, '../..', 'fetch');
@@ -250,8 +252,10 @@ const H_PREFIXES = {
 	foaf: 'http://xmlns.com/foaf/0.1/',
 
 
-	kwgr: 'http://stko-roy.geog.ucsb.edu/lod/resource/',
-	'kwg-ong':'http://stko-roy.geog.ucsb.edu/lod/ontology/',
+	//kwgr: 'http://stko-roy.geog.ucsb.edu/lod/resource/',
+	//'kwg-ong':'http://stko-roy.geog.ucsb.edu/lod/ontology/',
+	kwgr: 'http://stko-kwg.geog.ucsb.edu/lod/resource/',
+	'kwg-ong':'http://stko-kwg.geog.ucsb.edu/lod/ontology/',
 	//directrelief: 'https://stko-directrelief.geog.ucsb.edu/lod/ontology/' ,
 	//'dr-affiliation': 'https://stko-directrelief.geog.ucsb.edu/lod/affiliation/' ,
     //'dr-people': 'https://stko-directrelief.geog.ucsb.edu/lod/people/' ,
@@ -267,7 +271,7 @@ const H_PREFIXES = {
 	// 'iospress-contributor': 'http://ld.iospress.nl/rdf/contributor/',
 	// 'iospress-organization': 'http://ld.iospress.nl/rdf/organization/',
 	// 'iospress-geocode': 'http://ld.iospress.nl/rdf/geocode/',
-	geosparql: 'http://www.opengis.net/ont/geosparql#',
+	geo: 'http://www.opengis.net/ont/geosparql#',
 	ago: 'http://awesemantic-geo.link/ontology/',
 };
 
@@ -300,7 +304,8 @@ const negotiate_feature = (d_req, d_res, f_next) => {
 	//let p_redirect = `http://stko-roy.geog.ucsb.edu:3040/browse/#<http://stko-directrelief.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	//let p_redirect = `http://stko-roy.geog.ucsb.edu/browse/#<http://stko-directrelief.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	
-	let p_redirect = `http://stko-roy.geog.ucsb.edu/browse/#<http://stko-roy.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
+	let p_redirect = `http://stko-kwg.geog.ucsb.edu/browse/#<http://stko-kwg.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
+	//let p_redirect = `http://stko-roy.geog.ucsb.edu/browse/#<http://stko-roy.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	//let p_redirect = `http://localhost:3001/browse/#<http://stko-roy.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 
 	// entity uri
@@ -309,7 +314,8 @@ const negotiate_feature = (d_req, d_res, f_next) => {
 	//let sv1_entity = factory.namedNode(`http://localhost:3001${d_req.baseUrl}`).verbose();
 	//let sv1_entity = factory.namedNode(`http://stko-roy.geog.ucsb.edu:3040${d_req.baseUrl}`).verbose();
 	
-	let sv1_entity = factory.namedNode(`http://stko-roy.geog.ucsb.edu${d_req.baseUrl}`).verbose();
+	let sv1_entity = factory.namedNode(`http://stko-kwg.geog.ucsb.edu${d_req.baseUrl}`).verbose();
+	//let sv1_entity = factory.namedNode(`http://stko-roy.geog.ucsb.edu${d_req.baseUrl}`).verbose();
 	//let sv1_entity = factory.namedNode(`http://localhost:3001${d_req.baseUrl}`).verbose();
 	
 	console.log(sv1_entity)
@@ -564,9 +570,13 @@ k_app.get([
 					'yago-res': 'http://mpii.de/yago/resource/',
 					bibo: 'http://purl.org/ontology/bibo/',
 					
-					kwgr: 'http://stko-roy.geog.ucsb.edu/lod/resource/',
-					'kwg-ont':'http://stko-roy.geog.ucsb.edu/lod/ontology/',
+					//kwgr: 'http://stko-roy.geog.ucsb.edu/lod/resource/',
+					//'kwg-ont':'http://stko-roy.geog.ucsb.edu/lod/ontology/',
+					kwgr: 'http://stko-kwg.geog.ucsb.edu/lod/resource/',
+					'kwg-ont':'http://stko-kwg.geog.ucsb.edu/lod/ontology/',
+
 					sosa: 'http://www.w3.org/ns/sosa/',
+					time: 'http://www.w3.org/2006/time#',
 
 					//directrelief: 'https://stko-directrelief.geog.ucsb.edu/lod/ontology/' ,
 					//'dr-affiliation': 'https://stko-directrelief.geog.ucsb.edu/lod/affiliation/' ,
@@ -574,21 +584,23 @@ k_app.get([
 					//'dr-expertise': 'https://stko-directrelief.geog.ucsb.edu/lod/expertise/' ,
 					//'dr-place': 'https://stko-directrelief.geog.ucsb.edu/lod/place/' ,
 
-					// iospress: 'http://ld.iospress.nl/rdf/ontology/',
-					// 'iospress-category': 'http://ld.iospress.nl/rdf/category/',
-					// 'iospress-datatype': 'http://ld.iospress.nl/rdf/datatype/',
-					// 'iospress-index': 'http://ld.iospress.nl/rdf/index/',
-					// 'iospress-alias': 'http://ld.iospress.nl/rdf/alias/',
-					// 'iospress-artifact': 'http://ld.iospress.nl/rdf/artifact/',
-					// 'iospress-contributor': 'http://ld.iospress.nl/rdf/contributor/',
-					// 'iospress-organization': 'http://ld.iospress.nl/rdf/organization/',
-					// 'iospress-geocode': 'http://ld.iospress.nl/rdf/geocode/',
-					geosparql: 'http://www.opengis.net/ont/geosparql#',
+					 iospress: 'http://ld.iospress.nl/rdf/ontology/',
+					 'iospress-category': 'http://ld.iospress.nl/rdf/category/',
+					 'iospress-datatype': 'http://ld.iospress.nl/rdf/datatype/',
+					 'iospress-index': 'http://ld.iospress.nl/rdf/index/',
+					 'iospress-alias': 'http://ld.iospress.nl/rdf/alias/',
+					 'iospress-artifact': 'http://ld.iospress.nl/rdf/artifact/',
+					 'iospress-contributor': 'http://ld.iospress.nl/rdf/contributor/',
+					 'iospress-organization': 'http://ld.iospress.nl/rdf/organization/',
+					 'iospress-geocode': 'http://ld.iospress.nl/rdf/geocode/',
+					geo: 'http://www.opengis.net/ont/geosparql#',
 				},
 			},
 			order: [
 				'rdf:*',
 				'rdfs:*',
+				'geo:*',
+				'time:*',
 				'kwg-ont:hasSegment',
 				'kwg-ont:consectivePlace',
 				'sosa:isFeatureOfInterest',
@@ -609,57 +621,57 @@ k_app.get([
 				//'dr:hasExpertise',
 				//'dr:personalPage',
 
-				// 'iospress:category',
-				// 'iospress:organizationName',
-				// 'iospress:organizationInstitution',
-				// 'iospress:organizationPlace',
-				// 'iospress:organizationCountry',
-				// 'iospress-geocode:city',
-				// 'iospress-geocode:zone',
-				// 'iospress-geocode:region',
-				// 'iospress-geocode:postalCode',
-				// 'iospress-geocode:country',
-				// 'iospress:name',
-				// 'iospress:journalName',
-				// 'iospress:publisherName',
-				// 'iospress:publicationTitle',
-				// 'iospress:contributorFullName',
-				// 'iospress:contributorFirstName',
-				// 'iospress:contributorLastName',
-				// 'iospress:id',
-				// 'iospress:journalId',
-				// 'iospress:publicationId',
-				// 'iospress:issn',
-				// 'iospress:journalIssn',
-				// 'iospress:pIssn',
-				// 'iospress:journalPIssn',
-				// 'iospress:eIssn',
-				// 'iospress:journalEIssn',
-				// 'iospress:journalPublisher',
-				// 'iospress:publisher',
-				// 'iospress:publicationAbstract',
-				// 'iospress:publicationDoi',
-				// 'iospress:publicationDoiUrl',
-				// 'iospress:publicationAuthorList',
-				// 'iospress:publicationEditorList',
-				// 'iospress:publicationReceivedDate',
-				// 'iospress:publicationAcceptedDate',
-				// 'iospress:publicationDate',
-				// 'iospress:publicationPreprintDate',
-				// 'iospress:publicationPageStart',
-				// 'iospress:publicationPageEnd',
-				// 'iospress:contributorRole',
-				// 'iospress:contributorAffiliation',
-				// 'iospress:volumeInJournal',
-				// 'iospress:bookInSeries',
-				// 'iospress:issueInVolume',
-				// 'iospress:chapterInBook',
-				// 'iospress:articleInIssue',
-				// 'iospress:partOf',
-				// 'iospress:issueNumber',
-				// 'iospress:issueDate',
-				// 'iospress:volumeNumber',
-				// 'iospress:volumeReflectsYear',
+				 'iospress:category',
+				 'iospress:organizationName',
+				 'iospress:organizationInstitution',
+				 'iospress:organizationPlace',
+				 'iospress:organizationCountry',
+				 'iospress-geocode:city',
+				 'iospress-geocode:zone',
+				 'iospress-geocode:region',
+				 'iospress-geocode:postalCode',
+				 'iospress-geocode:country',
+				 'iospress:name',
+				 'iospress:journalName',
+				 'iospress:publisherName',
+				 'iospress:publicationTitle',
+				 'iospress:contributorFullName',
+				'iospress:contributorFirstName',
+				'iospress:contributorLastName',
+				'iospress:id',
+				'iospress:journalId',
+				'iospress:publicationId',
+				'iospress:issn',
+				'iospress:journalIssn',
+				'iospress:pIssn',
+				'iospress:journalPIssn',
+				'iospress:eIssn',
+				'iospress:journalEIssn',
+				'iospress:journalPublisher',
+				'iospress:publisher',
+				'iospress:publicationAbstract',
+				'iospress:publicationDoi',
+				'iospress:publicationDoiUrl',
+				'iospress:publicationAuthorList',
+				'iospress:publicationEditorList',
+				'iospress:publicationReceivedDate',
+				'iospress:publicationAcceptedDate',
+				'iospress:publicationDate',
+				'iospress:publicationPreprintDate',
+				'iospress:publicationPageStart',
+				'iospress:publicationPageEnd',
+				'iospress:contributorRole',
+				'iospress:contributorAffiliation',
+				'iospress:volumeInJournal',
+				'iospress:bookInSeries',
+				'iospress:issueInVolume',
+				'iospress:chapterInBook',
+				'iospress:articleInIssue',
+				'iospress:partOf',
+				'iospress:issueNumber',
+				'iospress:issueDate',
+				'iospress:volumeNumber',
+				'iospress:volumeReflectsYear',
 				'ago:geometry',
 				'iospress:*',
 				'bibo:*',

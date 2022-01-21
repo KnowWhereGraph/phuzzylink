@@ -18,7 +18,7 @@ require('brace/mode/json');
 const L = require('leaflet');
 const wellknown = require('wellknown');
 const R_WKT = /^\s*(<[^>]+>)?\s*(.+)\s*$/;
-const P_CRS_84 = 'http://www.opengis.net/def/crs/OGC/1.3/CRS84';
+const P_CRS_84 = '<http://www.opengis.net/def/crs/OGC/1.3/CRS84>';
 const P_EPSG_4326 = '<http://www.opengis.net/def/crs/EPSG/0/4326>';
 function parse_wkt(s_ewkt) {
 	// extract crs and wkt
@@ -841,7 +841,9 @@ class ResourceChannel {
 
 			// Modified by Rui
 			//else if(p_term.startsWith('https://stko-directrelief.geog.ucsb.edu/lod/place/Geometry.')) {
-			else if(p_term.startsWith('http://stko-roy.geog.ucsb.edu/lod/resource/geometry.')) {
+			//else if(p_term.startsWith('http://stko-roy.geog.ucsb.edu/lod/resource/geometry.')) {
+			else if(p_term.startsWith('http://stko-kwg.geog.ucsb.edu/lod/resource/geometry.')) {
+
 				console.log("find a geometry")
 
 				this.download_query_results(/* syntax: sparq */ `
