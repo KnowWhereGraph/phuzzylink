@@ -26,7 +26,7 @@ html {
 
 body {
   /* margin-bottom: 132px !important; */
-  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-family: sans-serif !important;
 }
 
 .left_container li {
@@ -43,7 +43,7 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -79,6 +79,11 @@ body {
 #footer .footer-menu ul,
 #header .header-menu ul {
   float: right;
+}
+
+.footer {
+    background: #00021F;
+    color: #fff;
 }
 
 ul {
@@ -181,9 +186,11 @@ body.loading .loadingWaitIcon {
 
 #header {
   background-color: #1b699e;
-  background-image: url('../img/header-bg.png');
+  background-image: url('../images/header-bg.png');
+  background-size: cover;
+  height: 150px;
+  padding: 30px;
   color: #ffff;
-  border-top: 2px solid #dbb105;
 }
 
 #footer {
@@ -198,6 +205,8 @@ footer img,
 #header img {
   vertical-align: middle;
   margin: 10px 0;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .skiplinks {
@@ -243,7 +252,8 @@ ul li:before {
 }
 
 footer a:hover {
-  color: #dbb105;
+  color: #2BA9BD !important;
+  text-decoration: underline !important;
 }
 
 a:hover {
@@ -278,7 +288,8 @@ a:hover {
 }
 
 footer a:hover {
-  color: #dbb105;
+  color: #2BA9BD !important;
+  text-decoration: underline !important;
 }
 
 .site_menu a:hover {
@@ -330,14 +341,14 @@ footer .site_caption {
 /* footer .middle_container,
 footer .right_container {
     width: 30%;
-} 
+}
 
 .site_caption p {
     font-family: 'PT Sans', Helvetica, sans-serif;
     font-size: 17px;
     font-weight: normal;
     margin: 0;
-    /* line-height: 2.6; 
+    /* line-height: 2.6;
 }*/
 
 .footer_site_caption,
@@ -355,7 +366,6 @@ footer .right_container {
 footer .logo,
 header .logo {
   display: inline-block;
-  max-width: 70px;
 }
 
 footer .footer-menu,
@@ -383,10 +393,6 @@ header .header-menu ul li {
 footer a,
 header a {
   color: #ffffff;
-}
-
-footer .logo {
-  max-width: 70px;
 }
 
 @media (min-width: 768px) {
@@ -467,9 +473,9 @@ footer .logo {
 }
 
 #submitBtn {
-  background-color: #515352;
-  border-color: #515352;
-  border-radius: 0;
+  background-color: #2BA9BD;
+  border-color: #2BA9BD;
+  border-radius: 5px;
 }
 
 #download_captcha_container {
@@ -676,7 +682,6 @@ footer .logo {
 @media only screen and (min-width: 790px) {
   header .logo {
     max-width: 100% !important;
-    margin: 4px 0 !important;
   }
 }
 
@@ -694,7 +699,12 @@ footer .logo {
 .nav .open>a:hover,
 .nav>li>a:focus,
 .nav>li>a:hover {
-  background-color: #4e8cbb !important;
+  background-color: #2BA9BD !important;
+  color: #fff;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: #fff !important;
 }
 
 .nav ul li {
@@ -702,7 +712,7 @@ footer .logo {
 }
 
 .nav ul {
-  background: #1b699e !important;
+  background: #2BA9BD !important;
   border-radius: 0px !important;
   /* border: 2px solid #dbb105; */
 }
@@ -712,7 +722,7 @@ footer .logo {
 }
 
 .nav ul li a:hover {
-  background: #4e8cbb !important;
+  background: #47B7C9 !important;
   /* text-decoration: underline !important; */
   cursor: pointer;
 }
@@ -758,6 +768,8 @@ footer .logo {
 
 #footer img {
   margin: 5px 20px !important;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 #footer .disclaimer {
@@ -1005,7 +1017,7 @@ input {
 }
 
 .stay-informed {
-  background: #dbb105;
+  background: #1C1E41;
 }
 
 .stay-informed .container {
@@ -1028,11 +1040,16 @@ input {
 }
 
 .stay-informed .btn {
-  border-radius: 0px !important;
-  background: #515352;
-  font-family: 'PT Sans', Helvetica, sans-serif;
+  border-radius: 5px !important;
+  background: #2BA9BD;
+  font-family: sans-serif;
   color: white;
   border: none !important;
+  transition: all .2s ease;
+}
+
+.stay-informed .btn:hover {
+  background: #42D6ED;
 }
 
 .stay-informed input[type="text"]:focus,
@@ -1053,4 +1070,33 @@ input {
   .stay-informed .btn {
     width: 45%;
   }
+}
+
+.phuzzy-colored-prefixes_group-0_item-0:before {
+    color: #2BA9BD !important;
+}
+
+#triples>div>div.body .table .value.named-node>a, #triples>div>div.body .table .value .named-node>a {
+  color: #2BA9BD !important;
+}
+
+.predicate.named-node a {
+  transition: all .2s ease;
+}
+
+.predicate.named-node a:hover {
+  color: #2BA9BD;
+}
+
+.fa.fa-external-link {
+  color: #2BA9BD;
+}
+
+.outgoing .header {
+  margin-left: 160px !important;
+}
+
+#stayInformedEmail {
+  border-radius: 5px;
+  height: 45px;
 }
