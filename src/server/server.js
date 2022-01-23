@@ -304,7 +304,7 @@ const negotiate_feature = (d_req, d_res, f_next) => {
 	//let p_redirect = `http://stko-roy.geog.ucsb.edu:3040/browse/#<http://stko-directrelief.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	//let p_redirect = `http://stko-roy.geog.ucsb.edu/browse/#<http://stko-directrelief.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	
-	let p_redirect = `http://stko-kwg.geog.ucsb.edu/browse/#<http://stko-kwg.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
+	let p_redirect = `/browse/#<http://stko-kwg.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	//let p_redirect = `http://stko-roy.geog.ucsb.edu/browse/#<http://stko-roy.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 	//let p_redirect = `http://localhost:3001/browse/#<http://stko-roy.geog.ucsb.edu/lod/${s_group}/${s_thing}>`;
 
