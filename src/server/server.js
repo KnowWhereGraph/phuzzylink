@@ -212,9 +212,9 @@ k_app.use('/asset/fonts', express.static(__dirname+'/../../node_modules/font-awe
 k_app.use('/asset/data', express.static(P_DIR_DATA));
 
 // // static routing from ios press interface
-k_app.use('/css', express.static(path.join(PD_ROOT, 'static/css')));
-k_app.use('/js', express.static(path.join(PD_ROOT, 'static/js')));
-k_app.use('/images', express.static(path.join(PD_ROOT, 'static/images')));
+k_app.use('/static/css', express.static(path.join(PD_ROOT, 'static/css')));
+k_app.use('/static/js', express.static(path.join(PD_ROOT, 'static/js')));
+k_app.use('/static/images', express.static(path.join(PD_ROOT, 'static/images')));
 k_app.use('/asset', express.static(path.join(PD_ROOT, 'static/asset')));
 
 //
