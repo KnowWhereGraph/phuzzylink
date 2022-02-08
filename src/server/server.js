@@ -41,15 +41,7 @@ const browserify_middleware = require('browserify-middleware');
 const proxy = require('http-proxy-middleware');
 
 const N_PORT = h_argv.p || h_argv.port || 80;
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://localhost:3031/iospress/query';
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-roy.geog.ucsb.edu:3040/direct-relief-mobility-network/query';
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://localhost:3030/direct-relief-mobility-network-new/query';
-
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-roy.geog.ucsb.edu:7201/repositories/Expert-Hazard';
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://localhost:3030/Expert-Storm/query';
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-roy.geog.ucsb.edu:7202/repositories/KnowWhereGraph-V1';
-//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V2';
-const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V2';
+const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V3';
 
 const P_DIR_PLUGINS = path.resolve(__dirname, '../..', 'plugins');
 const P_DIR_FETCH = path.resolve(__dirname, '../..', 'fetch');
