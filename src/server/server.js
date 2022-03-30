@@ -41,7 +41,9 @@ const browserify_middleware = require('browserify-middleware');
 const proxy = require('http-proxy-middleware');
 
 const N_PORT = h_argv.p || h_argv.port || 80;
-const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V3';
+//const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'http://stko-kwg.geog.ucsb.edu:7200/repositories/KWG-V3';
+const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'https://stko-kwg.geog.ucsb.edu/graphdb/repositories/KWG-Stagging';
+
 
 const P_DIR_PLUGINS = path.resolve(__dirname, '../..', 'plugins');
 const P_DIR_FETCH = path.resolve(__dirname, '../..', 'fetch');
