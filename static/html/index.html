@@ -11,9 +11,9 @@
   <link rel="shortcut icon" href="./favicon.png">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans:400,700%7CPT+Serif:400,700" />
   <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/circleButton.css">
-  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/circleButton.css">
+  <link rel="stylesheet" href="static/css/general.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -34,92 +34,22 @@
 <body>
 
   <header id="header" class="header block">
-
     <div class="container">
       <div >
         <div class="left_container col-sm-6 header-mobile-menu" style="padding-left: -250px;">
-                 <img src="/static/images/logo-kwg.svg" class = "logo" width="250" height="90"/>
+          <img src="/static/images/logo-kwg.svg" class = "logo" width="250" height="90"/>
         </div>
-
       <div class="header-menu clearfix menu" id="menu" style="padding: 18px 0;">
         <ul class="nav navbar-nav navbar-right">
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#About" onclick="toggle_menu(false)">About KnowWhereGraph</a>
-              </li>
-<!--               <li>
-                <a href="http://ld.iospress.nl/license" target="_blank" onclick="toggle_menu(false)">License</a>
-              </li> -->
-            </ul>
+          <li>
+            <a href="https://stko-kwg.geog.ucsb.edu/#/about" class="menu-link" role="button" aria-haspopup="true">About</a>
           </li>
-
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-<!--                 <a href="http://ld.iospress.nl/browse/#iospress-organization:Publisher.IOS_Press" target="_blank" onclick="toggle_menu(false)">Explore Dataset</a> -->
-<!--               <li>
-                <a href="#">Explore Data <span class="caret"></span></a>
-                <ul class="dropdown-menu" onclick="toggle_menu(true)">
-                  <li>  <a href="http://localhost:3001/browse/#directrelief:Expertise" target="_blank" onclick="toggle_menu(false)">Explore from Expertise</a></li>
-                  <li>  <a href="http://localhost:3001/browse/#directrelief:City" target="_blank" onclick="toggle_menu(false)">Explore from City</a></li>
-                </ul>
-              </li> -->
-                  <li>  <a href="/browse/#kwg-ont:Fire" target="_blank" onclick="toggle_menu(false)">Explore Fire</a></li>
-                  <li>  <a href="/browse/#kwg-ont:AdministrativeRegion" target="_blank" onclick="toggle_menu(false)">Explore Administrative Region</a></li>
-<!--                   <li><a href="/browse/#kwg-ont:BlueSky_Wildfire_Observation" target="_blank" onclick="toggle_menu(false)"> Explore Bluesky Air Quality Predication</li> -->
-                  <li><a href="/browse/#kwg-ont:USClimateDivision" target="_blank" onclick="toggle_menu(false)"> Explore US Climate Division</li>
-                  <li><a href="/browse/#kwg-ont:Declaration" target="_blank" onclick="toggle_menu(false)"> Explore Declaration</li>
-                  <li><a href="/browse/#kwg-ont:EarthquakeEvent" target="_blank" onclick="toggle_menu(false)"> Explore Earthquake Event</li>
-                  <li><a href="/browse/#iospress:Contributor" target="_blank" onclick="toggle_menu(false)"> Explore Expert (Contributor)</li>
-                  <li><a href="/browse/#kwg-ont:FederalJudicialDistrict" target="_blank" onclick="toggle_menu(false)"> Federal Judicial District</li>
-                  <li><a href="/browse/#kwg-ont:Census_US_MSA" target="_blank" onclick="toggle_menu(false)"> US Census Metropolitan Area</li>
-                  <li><a href="/browse/#kwg-ont:SoilMapUnit" target="_blank" onclick="toggle_menu(false)">Soil Map Unit</li>
-<!--                   <li>  <a href="/browse/#kwg-ont:Hazard" target="_blank" onclick="toggle_menu(false)">Explore from Hazard</a></li> -->
-
-            </ul>
+          <li>
+            <a href="https://stko-kwg.geog.ucsb.edu/#/explore" class="menu-link" data-toggle="dropdown" role="button" aria-haspopup="true">Explore</a>
           </li>
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <!--                 <a href="http://stko-roy.geog.ucsb.edu/browse/#directrelief:Expertise" target="_blank" onclick="toggle_menu(false)">Explore Dataset</a> -->
-              <li>
-<!--                 <a href="http://yasgui.org/short/YV941HkLw" target="_blank" onclick="toggle_menu(false)">Query Interface</a> -->
-                <a href="http://stko-kwg.geog.ucsb.edu:7200/sparql" target="_blank" onclick="toggle_menu(false)">Query Interface</a>
-              </li>
-              <li>
-<!--                 <a href="http://yasgui.org/short/YV941HkLw" target="_blank" onclick="toggle_menu(false)">Query Interface</a> -->
-                <a href="http://stko-kwg.geog.ucsb.edu:3006" target="_blank" onclick="toggle_menu(false)">Similarity Interface</a>
-              </li>
-
-            </ul>
+          <li>
+            <a href="https://stko-kwg.geog.ucsb.edu/#/result_search?tab=hazard" class="menu-link" role="button" aria-haspopup="true">Search</a>
           </li>
-
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="mailto:ruizhu@geog.ucsb.edu" target="_blank" onclick="toggle_menu()">Contact us</a>
-              </li>
-              <li>
-                <a href="#feedback" onclick="toggle_menu()">Feedback</a>
-              </li>
-            </ul>
-          </li>
-
         </ul>
       </div>
      </div>
@@ -231,112 +161,10 @@
     </div>
   </div>
 
+  <footer>
+    <img src="static/images/kwg-icon.png" alt="knowwheregraph" class="kwg-icon-footer">
+  </footer> 
 
-  <footer class="footer footer-menu">
-    <div class="container" style="max-width:1200px;">
-      <div class="row">
-        <div class="col-xs-3 col-sm-3 left-one">
-          <div id="navigation">
-            <!-- <label>Navigation</label> -->
-            <ul class="site_menu" id="site">
-              <li>
-                <a href="#">
-                  <img src="/static/images/logo-kwg.svg" class="logo" width="300" height="90" />
-                </a>
-                <li>
-                  <p style="font-size:18px; text-align:center;">
-                    <a href="#" target="_blank">&copy; KnowWhereGraph </a>
-<!--                   <a href="http://ld.iospress.nl/license" target="_blank">Disclaimer</a>
- -->                  </p>
-                </li>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="col-xs-7 col-sm-7 middle-one">
-          <div id="text1">
-            <ul class="site_menu" id="site site_text">
-              <li>
-                <p class="ld-connect-text" style="line-height:1.4em;">
-                  <b>Expert System</b> is a platform to manage experts and their expertises. It is supported by technologies of Linked Data and machine learning.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div id="text2">
-            <!-- <label>Text 2</label> -->
-            <div class="col-sm-3 site-map" style="padding:2px">
-              <ul>
-                <li>
-                  <strong>About</strong>
-                </li>
-                <li>
-                  <a href="/#About">About LD Connect</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-3 site-map" style="padding:2px">
-              <ul>
-                <li>
-                  <strong>Explore</strong>
-                </li>
-                <li>
-                  <a a href="/browse/#kwg-ont:Fire" style="text-decoration: none; cursor: pointer;">Explore Fire </a>
-                </li>
-                <li>
-                  <a a href="/browse/#kwg-ont:AdministrativeRegion" style="text-decoration: none; cursor: pointer;">Explore Administrative Region</a>
-                </li>
-                <li>
-                  <a a href="/browse/#kwg-ont:Hazard" style="text-decoration: none; cursor: pointer;">Explore from Hazard</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-3 site-map" style="padding:2px">
-              <ul>
-                <li>
-                  <strong>Tools</strong>
-                </li>
-                <li>
-                  <a href="http://stko-roy.geog.ucsb.edu:7202/sparql" target="_blank" href="" style=" cursor: pointer;">Query Interface</a>
-                </li>
-                <li>
-                  <a href="http://stko-roy.geog.ucsb.edu:3006" style="cursor: pointer;">Similarity Interface</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-3 site-map" style="padding:2px">
-              <ul>
-                <li>
-                  <strong>Contact</strong>
-                </li>
-                <li>
-                  <a href="mailto:ruizhu@geog.ucsb.edu" style="cursor: pointer;">Contact Us</a>
-                </li>
-                <li>
-                  <a href="#feedback" style="cursor: pointer;">Feedback</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-2 col-sm-2 right-one">
-          <div id="navigation">
-            <ul style="list-style:none; padding-top: 35px;">
-              <li style="float: none;">
-                <p class="powered-by">Funded by</p>
-              </li>
-            </ul>
-            <ul>
-              <li style="float: none;">
-                <img src="/static/images/nsf_ca.png" width="300" height="80">
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
 
   <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
