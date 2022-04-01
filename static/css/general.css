@@ -81,11 +81,6 @@ body {
   float: right;
 }
 
-.footer {
-    background: #00021F;
-    color: #fff;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -139,10 +134,6 @@ ul.site_menu {
   padding-left: 1%;
 }
 
-#footer .row {
-  padding: 15px 0;
-}
-
 .mousePointer {
   cursor: pointer;
 }
@@ -151,6 +142,10 @@ ul.site_menu {
   .topmenufixed {
     padding-top: 50px;
   }
+}
+
+.body-content {
+  padding-bottom: 30rem;
 }
 
 /* loading icon begin------------------*/
@@ -193,15 +188,6 @@ body.loading .loadingWaitIcon {
   color: #ffff;
 }
 
-#footer {
-  background-color: #1b699e;
-  color: #ffff;
-  /* position: absolute; */
-  bottom: 0;
-  width: 100%;
-}
-
-footer img,
 #header img {
   vertical-align: middle;
   margin: 10px 0;
@@ -219,7 +205,6 @@ footer img,
   z-index: 3;
 }
 
-footer .container,
 header .container {
   display: table;
   max-width: 980px;
@@ -237,10 +222,6 @@ header .container {
   box-sizing: border-box;
 }
 
-.footer-img {
-  margin-left: -11px;
-}
-
 ul.list>li:before {
   content: "-";
   text-indent: -2px;
@@ -249,11 +230,6 @@ ul.list>li:before {
 ul li:before {
   position: absolute;
   margin-left: -9px;
-}
-
-footer a:hover {
-  color: #2BA9BD !important;
-  text-decoration: underline !important;
 }
 
 a:hover {
@@ -363,12 +339,10 @@ footer .right_container {
   color: white;
 }
 
-footer .logo,
 header .logo {
   display: inline-block;
 }
 
-footer .footer-menu,
 header .header-menu {
   /*clear: both;*/
   text-align: right;
@@ -378,19 +352,16 @@ header .header-menu {
   font-size: 14px;
 }
 
-footer .footer-menu,
 header .header-menu {
   padding: 0;
 }
 
-footer .footer-menu ul li,
 header .header-menu ul li {
   list-style: none;
   padding: 0 8px;
   float: left;
 }
 
-footer a,
 header a {
   color: #ffffff;
 }
@@ -405,7 +376,6 @@ header a {
   .footer_site_caption_fb {
     padding-top: 6%;
   }
-  footer .footer-menu,
   header .header-menu {
     padding: 14px 0;
   }
@@ -945,9 +915,6 @@ header a {
   overflow: hidden;
 }
 
-#footer .widget a {
-  color: #fff;
-}
 
 @media only screen and (min-width: 769px) {
   .modal p {
@@ -1009,9 +976,8 @@ input {
 /* loading icon end------------------*/
 
 .bottom {
-  position: absolute;  
-/*  position: relative;
-*/  bottom:0;
+
+  bottom:0;
   width: 100%;
   top:100%;
 }

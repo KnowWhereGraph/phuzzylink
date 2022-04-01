@@ -1637,13 +1637,13 @@ class ResourceLoader {
 		});
 
 		// set label
-		k_phuzzy.space.querySelector('.outgoing>.header>.text').textContent = k_phuzzy.terse(p_resource);
+		k_phuzzy.space.querySelector('.outgoing>.browse-header>.text').textContent = k_phuzzy.terse(p_resource);
 
 		// set link
-		k_phuzzy.space.querySelector('.outgoing>.header>a').setAttribute('href', p_resource);
+		k_phuzzy.space.querySelector('.outgoing>.browse-header>a').setAttribute('href', p_resource);
 
 		// set rdf display
-		k_phuzzy.space.querySelector('.outgoing>.header>.source').classList.add('loading');
+		k_phuzzy.space.querySelector('.outgoing>.browse-header>.source').classList.add('loading');
 
 		// fetch chunk size
 		let n_chunk_size = k_phuzzy.chunk_size;
@@ -1834,12 +1834,12 @@ class Machine {
 	}
 
 	toggle() {
-		this.phuzzy.space.querySelector('.outgoing>.header>.source').classList.toggle('shown');
+		this.phuzzy.space.querySelector('.outgoing>.browse-header>.source').classList.toggle('shown');
 		this.element.container.classList.toggle('hide');
 	}
 
 	reset(p_uri) {
-		this.phuzzy.space.querySelector('.outgoing>.header>.source').classList.remove('shown');
+		this.phuzzy.space.querySelector('.outgoing>.browse-header>.source').classList.remove('shown');
 		this.element.container.classList.add('hide');
 		let s_from = '';
 		let d_url;
@@ -2055,8 +2055,8 @@ class Phuzzy {
 						}
 					});
 
-					d_space.querySelector('.outgoing>.header>.text').firstChild.nodeValue = `"${h_best_label.value}"`;
-					d_space.querySelector('.outgoing>.header>a').setAttribute('href', this.loader.resource);
+					d_space.querySelector('.outgoing>.browse-header>.text').firstChild.nodeValue = `"${h_best_label.value}"`;
+					d_space.querySelector('.outgoing>.browse-header>a').setAttribute('href', this.loader.resource);
 
 					document.title = '💥.🔗 phuzzy.link - '+h_best_label.value;
 				},
@@ -2393,7 +2393,7 @@ class Phuzzy {
 		k_machine.reset(p_resource);
 
 		// source
-		let d_source = this.space.querySelector('.outgoing .header .source');
+		let d_source = this.space.querySelector('.outgoing .browse-header .source');
 		d_source.classList.remove('ready');
 		d_source.classList.add('loading');
 

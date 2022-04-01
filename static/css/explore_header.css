@@ -77,7 +77,6 @@ header a {
   }
 }
 
-#footer .footer-menu ul,
 #header .header-menu ul {
   float: right;
 }
@@ -91,74 +90,22 @@ header a {
   z-index: 3;
 }
 
-.footer-link {
-  max-width: 581px;
-  margin-left: 313px;
-}
-
-.footer.container.row.right_container li {
-  list-style: none;
-  color: #fff;
-  padding-left: 15px;
-}
-.footer.container.row.right_container.site_menu li {
-  color: #fff;
-  padding-left: 10px;
-}
-.footer .widget a {
-  color: #fff;
-}
-.footer {
-  background-color: #1b699e;
-  color: #ffff;
-}
-.footer,
 .header {
   position: relative;
   width: 100%
 }
 
-.footer img,
 .header img {
   vertical-align: middle;
   margin: 10px 0;
 }
-.footer .container,
+
 .header .container {
   display: table;
   max-width: 980px;
   padding: 0;
 }
-.footer-img {
-  margin-left: -11px;
-}
-footer a:hover {
-  color: #dbb105;
-}
-.footer-menu .container {
-  padding-bottom: 28px;
-}
-.footer .row {
-    padding-left: 9px;
-  }
-footer .col-sm-4 {
-    width: 100%;
-    clear: both;
-  }
-footer {
-  background: #1b699e;
-}
 
-.footer.right_container li {
-  list-style: none;
-  color: #fff;
-  padding-left: 15px;
-}
-
-.footer.right_container.site_menu li {
-  color: #fff;
-  padding-left: 10px;
-}
 ul.list {
   list-style-type: none;
 }

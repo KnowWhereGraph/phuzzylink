@@ -234,7 +234,6 @@ div#download_embeddings_captcha_container {
   text-decoration: none;
 }
 
-.footer,
 .header {
   position: relative;
   width: 100%
@@ -1432,7 +1431,9 @@ ul {
 }
 
 footer {
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   height: 30rem;
