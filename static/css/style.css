@@ -1432,7 +1432,16 @@ ul {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  width: 100%;
   background: #00021F;
+}
+
+.kwg-icon-footer {
+  width: 25rem;
 }
 
 .left_container li {
