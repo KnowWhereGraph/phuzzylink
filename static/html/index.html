@@ -6,8 +6,6 @@
   <meta charset="UTF-8">
   <title>KnowWhereGraph</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <!-- <link rel="stylesheet" media="screen and (max-width: Xpx) and (min-width: Ypx)" href="style.css" /> -->
-
   <link rel="shortcut icon" href="./favicon.png">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans:400,700%7CPT+Serif:400,700" />
   <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
@@ -22,8 +20,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.5/d3-legend.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
- -->  <!-- <script src="./keyword-graph/categories/sparql.js"></script> -->
   <script src="./js/keywordGraph.js"></script>
   <?xml version="1.0" encoding="utf-8"?>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -32,142 +28,134 @@
 </head>
 
 <body>
-
-  <header id="header" class="header block">
-    <div class="container">
-      <div >
-        <div class="left_container col-sm-6 header-mobile-menu" style="padding-left: -250px;">
-          <img src="/static/images/logo-kwg.svg" class = "logo" width="250" height="90"/>
+  <div class="body-content">
+    <header id="header" class="header block">
+      <div class="container">
+        <div >
+          <div class="left_container col-sm-6 header-mobile-menu" style="padding-left: -250px;">
+            <img src="/static/images/logo-kwg.svg" class = "logo" width="250" height="90"/>
+          </div>
+        <div class="header-menu clearfix menu" id="menu" style="padding: 18px 0;">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="https://stko-kwg.geog.ucsb.edu/#/about" class="menu-link" role="button" aria-haspopup="true">About</a>
+            </li>
+            <li>
+              <a href="https://stko-kwg.geog.ucsb.edu/#/explore" class="menu-link" data-toggle="dropdown" role="button" aria-haspopup="true">Explore</a>
+            </li>
+            <li>
+              <a href="https://stko-kwg.geog.ucsb.edu/#/result_search?tab=hazard" class="menu-link" role="button" aria-haspopup="true">Search</a>
+            </li>
+          </ul>
         </div>
-      <div class="header-menu clearfix menu" id="menu" style="padding: 18px 0;">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="https://stko-kwg.geog.ucsb.edu/#/about" class="menu-link" role="button" aria-haspopup="true">About</a>
-          </li>
-          <li>
-            <a href="https://stko-kwg.geog.ucsb.edu/#/explore" class="menu-link" data-toggle="dropdown" role="button" aria-haspopup="true">Explore</a>
-          </li>
-          <li>
-            <a href="https://stko-kwg.geog.ucsb.edu/#/result_search?tab=hazard" class="menu-link" role="button" aria-haspopup="true">Search</a>
-          </li>
-        </ul>
       </div>
-     </div>
-    </div>
-  </header>
+      </div>
+    </header>
 
 
-  <div class="container side_text welcome_text" id="About">
+    <div class="container side_text welcome_text" id="About">
 
-    <h1 class="portal_text">
-      <strong>Welcome to KnowWhereGraph Dereferencing Interface</strong>
-    </h1>
-    <p style="font-style: italic;">
-      Note: This platform is in BETA, if you have any feedback, please don't hesitate to
-      <a href="#feedback">get back to us.</a>
+      <h1 class="portal_text">
+        <strong>Welcome to KnowWhereGraph Dereferencing Interface</strong>
+      </h1>
+      <p style="font-style: italic;">
+        Note: This platform is in BETA, if you have any feedback, please don't hesitate to
+        <a href="#feedback">get back to us.</a>
 
-    </p>
-
-    <!--<h2><strong>About IOS Press Linked Data</strong></h2>-->
-    <p>
-      Knowledge graphs are not merely a set of technologies but a novel paradigm for the representation, retrieval, and integration of data from highly heterogeneous sources. Within just a few years, knowledge graphs have become a core component of modern search engines, intelligent personal assistants, business intelligence, and so on. Interestingly, despite large-scale data availability, they have not yet been as successful in the realm of environmental data and environmental intelligence services.
-    </p>
-    <p>
-      KnowWhereGraph explores why spatial data requires special treatment, and how, more importantly, when to convert environmental data into a knowledge graph-ready format. Our KnowWhereGraph contains a wide range of integrated datasets at the human-environment interface.
-    </p>
-      <p>As part of the project, we showcase three pilot studies, and introduce geospatial enrichment services on top of our graph to showcase its value proposition. Jointly, the graph and services provides answers to questions such as "what is here", "what happened here before", "how does this region compare to..." at a high spatial resolution across the entire globe.
       </p>
 
-      <p>This interface helps one to explore our KnowWhere graph by using the follow-your-nose principle. To start the search, one can choose from nodes belong to the class of (1).  Fire, or (2). Administrative Region. ...
-    </p>
+      <!--<h2><strong>About IOS Press Linked Data</strong></h2>-->
+      <p>
+        Knowledge graphs are not merely a set of technologies but a novel paradigm for the representation, retrieval, and integration of data from highly heterogeneous sources. Within just a few years, knowledge graphs have become a core component of modern search engines, intelligent personal assistants, business intelligence, and so on. Interestingly, despite large-scale data availability, they have not yet been as successful in the realm of environmental data and environmental intelligence services.
+      </p>
+      <p>
+        KnowWhereGraph explores why spatial data requires special treatment, and how, more importantly, when to convert environmental data into a knowledge graph-ready format. Our KnowWhereGraph contains a wide range of integrated datasets at the human-environment interface.
+      </p>
+        <p>As part of the project, we showcase three pilot studies, and introduce geospatial enrichment services on top of our graph to showcase its value proposition. Jointly, the graph and services provides answers to questions such as "what is here", "what happened here before", "how does this region compare to..." at a high spatial resolution across the entire globe.
+        </p>
 
-    <p>
-      This prototype is part of the KnowWhereGraph project, which is funded by the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2033521&HistoricalAwards=false">NSF Convergence Accelarator Program</a> with award number: 2033521.
-    </p>
+        <p>This interface helps one to explore our KnowWhere graph by using the follow-your-nose principle. To start the search, one can choose from nodes belong to the class of (1).  Fire, or (2). Administrative Region. ...
+      </p>
 
-    <p>
-      Feel free to contact us if you have any questions. We are also looking forward to any types of collabrations. Please
-      <a href="mailto:ruizhu@geog.ucsb.edu" target="_top">email us</a> or
-      <a href="#feedback">fill in the form</a> below and we will get back to you at our earliest convenience.
-    </p>
+      <p>
+        This prototype is part of the KnowWhereGraph project, which is funded by the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2033521&HistoricalAwards=false">NSF Convergence Accelarator Program</a> with award number: 2033521.
+      </p>
 
-    <p style="font-style: italic; font-size: 25px" >
-      News: Want to contribute to humanitairian relief? Join our network by filling out this <a href ="https://stko-roy.geog.ucsb.edu:4000/">survey</a>.
-    </p>
+      <p>
+        Feel free to contact us if you have any questions. We are also looking forward to any types of collabrations. Please
+        <a href="mailto:ruizhu@geog.ucsb.edu" target="_top">email us</a> or
+        <a href="#feedback">fill in the form</a> below and we will get back to you at our earliest convenience.
+      </p>
 
-  </div>
+      <p style="font-style: italic; font-size: 25px" >
+        News: Want to contribute to humanitairian relief? Join our network by filling out this <a href ="https://stko-roy.geog.ucsb.edu:4000/">survey</a>.
+      </p>
 
-  <div style="background-color: #F5F5F5;">
+    </div>
 
-    <div class="form-container" id="feedback">
-      <h1>Feedback form</h1>
-      <p>Please let us know what you think, so we can further improve our platform!</p>
-      <br>
-      <form method="post" id="feedback-form" name="feedbackForm">
-        <div class="name">
-          <div class="form-group">
-            <!-- <label for="inputName">Name</label> -->
-            <input type="text" class="form-control" id="inputName" placeholder="Name" />
+    <div style="background-color: #F5F5F5;">
+
+      <div class="form-container" id="feedback">
+        <h1>Feedback form</h1>
+        <p>Please let us know what you think, so we can further improve our platform!</p>
+        <br>
+        <form method="post" id="feedback-form" name="feedbackForm">
+          <div class="name">
+            <div class="form-group">
+              <!-- <label for="inputName">Name</label> -->
+              <input type="text" class="form-control" id="inputName" placeholder="Name" />
+            </div>
+            <div class="form-group">
+              <!-- <label for="inputEmail">Email address</label> -->
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+            </div>
           </div>
-          <div class="form-group">
-            <!-- <label for="inputEmail">Email address</label> -->
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+          <div class="name">
+            <div class="form-group">
+              <!-- <label for="subject">Subject</label> -->
+              <select class="form-control selectpicker" id="subject">
+                <option value="" selected disabled>Subject</option>
+                <option>Usability</option>
+                <option>Missing or New Data</option>
+                <option>Wrong Data</option>
+                <option>Suggestions</option>
+                <option>Other</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="name">
-          <div class="form-group">
-            <!-- <label for="subject">Subject</label> -->
-            <select class="form-control selectpicker" id="subject">
-              <option value="" selected disabled>Subject</option>
-              <option>Usability</option>
-              <option>Missing or New Data</option>
-              <option>Wrong Data</option>
-              <option>Suggestions</option>
-              <option>Other</option>
-            </select>
+          <div class="form-group textarea-form-class">
+            <textarea class="form-control textarea" id="feedback-comments" rows="5" placeholder="Comments" value="" required></textarea>
           </div>
-          <!-- <div class="form-group">
-            <label for="inputEmail">Email address</label>
-            <input type="text" class="form-control" id="inputUrl" placeholder="URL" />
-          </div> -->
-        </div>
-        <div class="form-group textarea-form-class">
-          <!-- <label for="comments">Comments</label> -->
-          <textarea class="form-control textarea" id="feedback-comments" rows="5" placeholder="Comments" value="" required></textarea>
-        </div>
-        <div id="feedback_captcha_container"></div>
-        <div class="form-group send">
-          <input class="btn btn-primary" id="submitBtn" type="submit" value="Send Feedback" />
-        </div>
-      </form>
+          <div id="feedback_captcha_container"></div>
+          <div class="form-group send">
+            <input class="btn btn-primary" id="submitBtn" type="submit" value="Send Feedback" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="licence Ld" id="licence">
+      <div class="container">
+        <form method="post" id="stay-informed-form" name="stayInformedForm">
+          <div class="row">
+            <div class="column licence_text">
+              <h4 class="side-text">Stay informed about KnowWhereGraph</h4>
+            </div>
+            <div id="stay_informed_captcha_container"></div>
+            <div class="column" id="email">
+              <input type="text" class="email" placeholder="Email" id="stayInformedEmail" required/>
+            </div>
+            <div class="column staybtn">
+              <input class="btn btn-primary submit" id="stayInformedBtn" type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-  <div class="licence Ld" id="licence">
-    <div class="container">
-      <form method="post" id="stay-informed-form" name="stayInformedForm">
-        <div class="row">
-          <div class="column licence_text">
-            <h4 class="side-text">Stay informed about KnowWhereGraph</h4>
-          </div>
-          <div id="stay_informed_captcha_container"></div>
-          <div class="column" id="email">
-            <input type="text" class="email" placeholder="Email" id="stayInformedEmail" required/>
-          </div>
-          <div class="column staybtn">
-            <input class="btn btn-primary submit" id="stayInformedBtn" type="submit" value="Submit" />
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <footer>
     <img src="static/images/kwg-icon.png" alt="knowwheregraph" class="kwg-icon-footer">
   </footer> 
 
-
-
-  <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
   <script src="js/index.js"></script>
   <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
   <script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha" async defer></script>
