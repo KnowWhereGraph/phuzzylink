@@ -165,6 +165,8 @@ const PD_RESOURCES = path.join(PD_LIB_WEBAPP, '_resources');
 const PD_DIST = path.join(PD_ROOT, 'build');
 const PD_DIST_WEBAPP = path.join(PD_DIST, 'webapp');
 
+const SCHEMA_BASE_DIR = path.join('static', 'schema');
+
 const R_SAFE_PATH = /^[\w-]+$/;
 
 function assert_safe_path(s_file, d_res) {
@@ -209,6 +211,7 @@ k_app.use('/asset/data', express.static(P_DIR_DATA));
 k_app.use('/static/css', express.static(path.join(PD_ROOT, 'static/css')));
 k_app.use('/static/js', express.static(path.join(PD_ROOT, 'static/js')));
 k_app.use('/static/images', express.static(path.join(PD_ROOT, 'static/images')));
+k_app.use('/static/schema', express.static(path.join(PD_ROOT, SCHEMA_BASE_DIR)));
 k_app.use('/asset', express.static(path.join(PD_ROOT, 'static/asset')));
 
 //
@@ -412,6 +415,43 @@ k_app.use([
 	//'/rdf/:group/:thing',
 	'/lod/:group/:thing',
 ], negotiate_feature);
+
+
+// handler for /lod/ontology, with content negotation
+const serve_ontology_site = (d_req, d_res, f_next) => {
+	d_req.negotiate({
+		'text/html': () => {
+			d_res.type("text/html");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_BASE_DIR, 'index.html'));
+		},
+		'application/rdf+xml': () => {
+			d_res.type("application/rdf+xml");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_BASE_DIR, 'ontology.rdf'));
+		},
+		'text/turtle': () => {
+			d_res.type("text/turtle");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_BASE_DIR, 'ontology.ttl'));
+		},
+		'application/ld+json': () => {
+			d_res.type("application/ld+json");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_BASE_DIR, 'ontology.jsonld'));
+		},
+		'text/ntriples': () => {
+			d_res.type("text/ntriples");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_BASE_DIR, 'ontology.nt'));
+		}
+	});
+}
+
+// request for /lod/ontology
+k_app.use([
+	'/lod/ontology',
+], serve_ontology_site);
 
 // fetch specific pack
 k_app.get([
