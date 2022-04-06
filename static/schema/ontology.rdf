@@ -792,6 +792,16 @@ Anthony D&apos;Onofrio</terms:contributor>
     
 
 
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/target -->
+
+
+    <owl:ObjectProperty rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/target">
+        <rdfs:comment>This property denotes the relation between an observation and a S2 Cell. This is analogous to a the property sosa:hasFearureOfInterest.</rdfs:comment>
+        <rdfs:label>target</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/timeScale -->
 
 
@@ -3622,6 +3632,7 @@ Anthony D&apos;Onofrio</terms:contributor>
 
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/ComplexFire">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire"/>
+        <rdfs:label>Complex Fire</rdfs:label>
     </owl:Class>
     
 
@@ -3896,6 +3907,7 @@ Anthony D&apos;Onofrio</terms:contributor>
 
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Hazard"/>
+        <rdfs:label>Fire</rdfs:label>
     </owl:Class>
     
 
@@ -4374,7 +4386,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSUnknownFire">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSFire"/>
         <rdfs:comment>Source - MTBS (https://mtbs.gov/direct-downloadhttps://mtbs.gov/direct-download)</rdfs:comment>
-        <rdfs:label>MTBS Unknown FIre</rdfs:label>
+        <rdfs:label>MTBS Unknown Fire</rdfs:label>
     </owl:Class>
     
 
@@ -4398,7 +4410,7 @@ Anthony D&apos;Onofrio</terms:contributor>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSFire"/>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/WildlandFireUse"/>
         <rdfs:comment>Source - MTBS (https://mtbs.gov/direct-downloadhttps://mtbs.gov/direct-download)</rdfs:comment>
-        <rdfs:label>MTBS Wildland Fire Use</rdfs:label>
+        <rdfs:label>MTBS Wildland Fire</rdfs:label>
     </owl:Class>
     
 
@@ -4539,7 +4551,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAAstronomicalLowTide">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Astronomical Low Tide Event</rdfs:label>
+        <rdfs:label>NOAA Astronomical Low Tide Event</rdfs:label>
     </owl:Class>
     
 
@@ -4550,7 +4562,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAAvalanche">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Avalanche Event</rdfs:label>
+        <rdfs:label>NOAA Avalanche Event</rdfs:label>
     </owl:Class>
     
 
@@ -4561,7 +4573,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAABlizzard">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Blizzard Event</rdfs:label>
+        <rdfs:label>NOAA Blizzard Event</rdfs:label>
     </owl:Class>
     
 
@@ -4572,7 +4584,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAACoastalFlood">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Coastal Flood Event</rdfs:label>
+        <rdfs:label>NOAA Coastal Flood Event</rdfs:label>
     </owl:Class>
     
 
@@ -4583,7 +4595,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAColdWindChill">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Cold/Wind Chill Event</rdfs:label>
+        <rdfs:label>NOAA Cold/Wind Chill Event</rdfs:label>
     </owl:Class>
     
 
@@ -4594,7 +4606,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADebrisFlow">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Debris Flow Event</rdfs:label>
+        <rdfs:label>NOAA Debris Flow Event</rdfs:label>
     </owl:Class>
     
 
@@ -4605,7 +4617,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADenseFog">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Dense Fog Event</rdfs:label>
+        <rdfs:label>NOAA Dense Fog Event</rdfs:label>
     </owl:Class>
     
 
@@ -4616,7 +4628,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADenseSmoke">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Dense Smoke Event</rdfs:label>
+        <rdfs:label>NOAA Dense Smoke Event</rdfs:label>
     </owl:Class>
     
 
@@ -4627,7 +4639,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADrought">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Drought Event</rdfs:label>
+        <rdfs:label>NOAA Drought Event</rdfs:label>
     </owl:Class>
     
 
@@ -4638,7 +4650,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADustDevil">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Dust Devil Event</rdfs:label>
+        <rdfs:label>NOAA Dust Devil Event</rdfs:label>
     </owl:Class>
     
 
@@ -4649,7 +4661,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADustStorm">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Dust Storm Event</rdfs:label>
+        <rdfs:label>NOAA Dust Storm Event</rdfs:label>
     </owl:Class>
     
 
@@ -4660,7 +4672,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAExcessiveHeat">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Excessive Heat Event</rdfs:label>
+        <rdfs:label>NOAA Excessive Heat Event</rdfs:label>
     </owl:Class>
     
 
@@ -4671,7 +4683,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAExtremeColdWindChill">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Extreme Cold/Wind Chill Event</rdfs:label>
+        <rdfs:label>NOAA Extreme Cold/Wind Chill Event</rdfs:label>
     </owl:Class>
     
 
@@ -4682,7 +4694,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFlashFlood">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Flash Flood Event</rdfs:label>
+        <rdfs:label>NOAA Flash Flood Event</rdfs:label>
     </owl:Class>
     
 
@@ -4693,7 +4705,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFlood">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Flood Event</rdfs:label>
+        <rdfs:label>NOAA Flood Event</rdfs:label>
     </owl:Class>
     
 
@@ -4704,7 +4716,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFreezingFog">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Freezing Fog Event</rdfs:label>
+        <rdfs:label>NOAA Freezing Fog Event</rdfs:label>
     </owl:Class>
     
 
@@ -4715,7 +4727,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFrostFreeze">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Frost/Freeze Event</rdfs:label>
+        <rdfs:label>NOAA Frost/Freeze Event</rdfs:label>
     </owl:Class>
     
 
@@ -4726,7 +4738,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFunnelCloud">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Funnel Cloud Event</rdfs:label>
+        <rdfs:label>NOAA Funnel Cloud Event</rdfs:label>
     </owl:Class>
     
 
@@ -4737,7 +4749,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHail">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Hail Event</rdfs:label>
+        <rdfs:label>NOAA Hail Event</rdfs:label>
     </owl:Class>
     
 
@@ -4761,7 +4773,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHeat">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Heat Event</rdfs:label>
+        <rdfs:label>NOAA Heat Event</rdfs:label>
     </owl:Class>
     
 
@@ -4772,7 +4784,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHeavyRain">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Heavy Rain Event</rdfs:label>
+        <rdfs:label>NOAA Heavy Rain Event</rdfs:label>
     </owl:Class>
     
 
@@ -4783,7 +4795,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHeavySnow">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Heavy Snow Event</rdfs:label>
+        <rdfs:label>NOAA Heavy Snow Event</rdfs:label>
     </owl:Class>
     
 
@@ -4794,7 +4806,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHighSurf">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>High Surf Event</rdfs:label>
+        <rdfs:label>NOAA High Surf Event</rdfs:label>
     </owl:Class>
     
 
@@ -4805,7 +4817,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHighWind">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>High Wind Event</rdfs:label>
+        <rdfs:label>NOAA High Wind Event</rdfs:label>
     </owl:Class>
     
 
@@ -4816,7 +4828,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHurricane">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Hurricane Event</rdfs:label>
+        <rdfs:label>NOAA Hurricane Event</rdfs:label>
     </owl:Class>
     
 
@@ -4827,7 +4839,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAIceStorm">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Ice Storm Event</rdfs:label>
+        <rdfs:label>NOAA Ice Storm Event</rdfs:label>
     </owl:Class>
     
 
@@ -4838,7 +4850,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAALake-EffectSnow">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Lake-Effect Snow Event</rdfs:label>
+        <rdfs:label>NOAA Lake-Effect Snow Event</rdfs:label>
     </owl:Class>
     
 
@@ -4849,7 +4861,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAALakeshoreFlood">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Lakeshore Flood Event</rdfs:label>
+        <rdfs:label>NOAA Lakeshore Flood Event</rdfs:label>
     </owl:Class>
     
 
@@ -4860,7 +4872,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAALightning">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Lightning Event</rdfs:label>
+        <rdfs:label>NOAA Lightning Event</rdfs:label>
     </owl:Class>
     
 
@@ -4871,7 +4883,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineHail">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine Hail Event</rdfs:label>
+        <rdfs:label>NOAA Marine Hail Event</rdfs:label>
     </owl:Class>
     
 
@@ -4882,7 +4894,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineHighWind">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine High Wind Event</rdfs:label>
+        <rdfs:label>NOAA Marine High Wind Event</rdfs:label>
     </owl:Class>
     
 
@@ -4893,7 +4905,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineHurricaneTyphoon">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine Hurricane/Typhoon Event</rdfs:label>
+        <rdfs:label>NOAA Marine Hurricane/Typhoon Event</rdfs:label>
     </owl:Class>
     
 
@@ -4904,7 +4916,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineStrongWind">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine Strong Wind Event</rdfs:label>
+        <rdfs:label>NOAA Marine Strong Wind Event</rdfs:label>
     </owl:Class>
     
 
@@ -4915,7 +4927,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineThunderstormWind">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine Thunderstorm Wind Event</rdfs:label>
+        <rdfs:label>NOAA Marine Thunderstorm Wind Event</rdfs:label>
     </owl:Class>
     
 
@@ -4926,7 +4938,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineTropicalDepression">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine Tropical Depression Event</rdfs:label>
+        <rdfs:label>NOAA Marine Tropical Depression Event</rdfs:label>
     </owl:Class>
     
 
@@ -4937,7 +4949,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineTropicalStorm">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Marine Tropical Storm Event</rdfs:label>
+        <rdfs:label>NOAA Marine Tropical Storm Event</rdfs:label>
     </owl:Class>
     
 
@@ -4948,7 +4960,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAARipCurrent">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Rip Current Event</rdfs:label>
+        <rdfs:label>NOAA Rip Current Event</rdfs:label>
     </owl:Class>
     
 
@@ -4959,7 +4971,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAASleet">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Sleet Event</rdfs:label>
+        <rdfs:label>NOAA Sleet Event</rdfs:label>
     </owl:Class>
     
 
@@ -4970,7 +4982,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAASneakerwave">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Sneakerwave Event</rdfs:label>
+        <rdfs:label>NOAA Sneakerwave Event</rdfs:label>
     </owl:Class>
     
 
@@ -4981,7 +4993,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAStormSurgeTide">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Storm Surge/Tide Event</rdfs:label>
+        <rdfs:label>NOAA Storm Surge/Tide Event</rdfs:label>
     </owl:Class>
     
 
@@ -4992,7 +5004,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAStrongWind">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Strong Wind Event</rdfs:label>
+        <rdfs:label>NOAA Strong Wind Event</rdfs:label>
     </owl:Class>
     
 
@@ -5003,7 +5015,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAThunderstormWind">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Thunderstorm Wind Event</rdfs:label>
+        <rdfs:label>NOAA Thunderstorm Wind Event</rdfs:label>
     </owl:Class>
     
 
@@ -5014,7 +5026,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAATornado">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Tornado Event</rdfs:label>
+        <rdfs:label>NOAA Tornado Event</rdfs:label>
     </owl:Class>
     
 
@@ -5025,7 +5037,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAATropicalDepression">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Tropical Depression Event</rdfs:label>
+        <rdfs:label>NOAA Tropical Depression Event</rdfs:label>
     </owl:Class>
     
 
@@ -5036,7 +5048,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAATropicalStorm">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Tropical Storm Event</rdfs:label>
+        <rdfs:label>NOAA Tropical Storm Event</rdfs:label>
     </owl:Class>
     
 
@@ -5047,7 +5059,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWaterspout">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Waterspout Event</rdfs:label>
+        <rdfs:label>NOAA Waterspout Event</rdfs:label>
     </owl:Class>
     
 
@@ -5059,7 +5071,7 @@ Anthony D&apos;Onofrio</terms:contributor>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Wildfire"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Wildfire Event</rdfs:label>
+        <rdfs:label>NOAA Wildfire Event</rdfs:label>
     </owl:Class>
     
 
@@ -5070,7 +5082,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWinterStorm">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Winter Storm Event</rdfs:label>
+        <rdfs:label>NOAA Winter Storm Event</rdfs:label>
     </owl:Class>
     
 
@@ -5081,7 +5093,7 @@ Anthony D&apos;Onofrio</terms:contributor>
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWinterWeather">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard"/>
         <rdfs:comment>Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)</rdfs:comment>
-        <rdfs:label>Winter Weather Event</rdfs:label>
+        <rdfs:label>NOAA Winter Weather Event</rdfs:label>
     </owl:Class>
     
 
@@ -5127,6 +5139,7 @@ Anthony D&apos;Onofrio</terms:contributor>
 
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/OutOfAreaResponseFire">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire"/>
+        <rdfs:label>Out Of Area Response Fire</rdfs:label>
     </owl:Class>
     
 
@@ -5147,6 +5160,7 @@ Anthony D&apos;Onofrio</terms:contributor>
 
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/PrescribedFire">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire"/>
+        <rdfs:label>Prescribed Fire</rdfs:label>
     </owl:Class>
     
 
@@ -5696,7 +5710,10 @@ Anthony D&apos;Onofrio</terms:contributor>
     <!-- http://stko-kwg.geog.ucsb.edu/lod/ontology/Wildfire -->
 
 
-    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/Wildfire"/>
+    <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/Wildfire">
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire"/>
+        <rdfs:label>Wildfire</rdfs:label>
+    </owl:Class>
     
 
 
@@ -5705,6 +5722,7 @@ Anthony D&apos;Onofrio</terms:contributor>
 
     <owl:Class rdf:about="http://stko-kwg.geog.ucsb.edu/lod/ontology/WildlandFireUse">
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire"/>
+        <rdfs:label>Wildland Fire</rdfs:label>
     </owl:Class>
     
 
@@ -6186,6 +6204,7 @@ Anthony D&apos;Onofrio</terms:contributor>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <rdfs:label>Feature Of Interest</rdfs:label>
     </owl:Class>
     
 
@@ -8366,6 +8385,17 @@ Anthony D&apos;Onofrio</terms:contributor>
     
 
 
+    <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/overlapArea.squareMeter -->
+
+
+    <owl:NamedIndividual rdf:about="http://stko-kwg.geog.ucsb.edu/lod/resource/overlapArea.squareMeter">
+        <rdf:type rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/SoilMapUnitObservableProperty"/>
+        <rdfs:comment>overlap area in square meters</rdfs:comment>
+        <rdfs:label>overlapArea</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://stko-kwg.geog.ucsb.edu/lod/resource/psychiatric -->
 
 
@@ -8948,6 +8978,11 @@ Anthony D&apos;Onofrio</terms:contributor>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/RoadSegment"/>
     </owl:Restriction>
     <owl:Restriction>
+        <owl:onProperty rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/target"/>
+        <owl:someValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/S2Cell"/>
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/SoilMapUnitOverlapObservation"/>
+    </owl:Restriction>
+    <owl:Restriction>
         <owl:onProperty rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/timeScale"/>
         <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Duration"/>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/ClimateObservation"/>
@@ -9471,6 +9506,11 @@ Anthony D&apos;Onofrio</terms:contributor>
         <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
         <owl:someValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/SoilMapUnitObservableProperty"/>
         <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/SoilMapUnitObservation"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+        <owl:someValuesFrom rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/SoilMapUnitObservableProperty"/>
+        <rdfs:subClassOf rdf:resource="http://stko-kwg.geog.ucsb.edu/lod/ontology/SoilMapUnitOverlapObservation"/>
     </owl:Restriction>
     <owl:Restriction>
         <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
