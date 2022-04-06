@@ -448,10 +448,43 @@ const serve_ontology_site = (d_req, d_res, f_next) => {
 	});
 }
 
-// request for /lod/ontology
+// handler for /lod/ontology with extension
+const serve_ontology_file = (d_req, d_res, f_next) => {
+	const extension = d_req.params.ext;
+	const file_path = path.join(PD_ROOT, SCHEMA_BASE_DIR, 'ontology' + extension)
+
+	if (!fs.existsSync(file_path)) {
+		d_res.statusCode = 404;
+		d_res.send("Not Found")
+
+		return;
+	}
+
+	var content_type;
+
+	if (extension == ".ttl") {
+		content_type = "text/turtle";
+	} if (extension == ".nt") {
+		content_type = "text/ntriples";
+	} if (extension == ".rdf") {
+		content_type = "application/rdf+xml";
+	} if (extension == ".jsonld") {
+		content_type = "application/ld+json";
+	}
+
+	d_res.type(content_type);
+	d_res.statusCode = 200;
+	d_res.sendFile(file_path);
+}
+
+// requests for /lod/ontology
 k_app.use([
 	'/lod/ontology',
 ], serve_ontology_site);
+
+k_app.use([
+	'/lod/ontology:ext',
+], serve_ontology_file);
 
 // fetch specific pack
 k_app.get([
