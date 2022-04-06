@@ -461,6 +461,12 @@ xsd:gYear rdf:type rdfs:Datatype .
                        "road segment starts from" .
 
 
+###  http://stko-kwg.geog.ucsb.edu/lod/ontology/target
+:target rdf:type owl:ObjectProperty ;
+        rdfs:comment "This property denotes the relation between an observation and a S2 Cell. This is analogous to a the property sosa:hasFearureOfInterest." ;
+        rdfs:label "target" .
+
+
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/timeScale
 :timeScale rdf:type owl:ObjectProperty ;
            rdfs:comment "Property that measures the duration over which NOAA's climate division observation measurements are made" ;
@@ -2209,7 +2215,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/ComplexFire
 :ComplexFire rdf:type owl:Class ;
-             rdfs:subClassOf :Fire .
+             rdfs:subClassOf :Fire ;
+             rdfs:label "Complex Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/CrisisCounselling
@@ -2383,7 +2390,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Fire
 :Fire rdf:type owl:Class ;
-      rdfs:subClassOf :Hazard .
+      rdfs:subClassOf :Hazard ;
+      rdfs:label "Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/FireCause
@@ -2687,7 +2695,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 :MTBSUnknownFire rdf:type owl:Class ;
                  rdfs:subClassOf :MTBSFire ;
                  rdfs:comment "Source - MTBS (https://mtbs.gov/direct-downloadhttps://mtbs.gov/direct-download)" ;
-                 rdfs:label "MTBS Unknown FIre" .
+                 rdfs:label "MTBS Unknown Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/MTBSWildfire
@@ -2703,7 +2711,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                      rdfs:subClassOf :MTBSFire ,
                                      :WildlandFireUse ;
                      rdfs:comment "Source - MTBS (https://mtbs.gov/direct-downloadhttps://mtbs.gov/direct-download)" ;
-                     rdfs:label "MTBS Wildland Fire Use" .
+                     rdfs:label "MTBS Wildland Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/MagnitudeObservableProperty
@@ -2796,133 +2804,133 @@ xsd:gYear rdf:type rdfs:Datatype .
 :NOAAAstronomicalLowTide rdf:type owl:Class ;
                          rdfs:subClassOf :NOAAHazard ;
                          rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                         rdfs:label "Astronomical Low Tide Event" .
+                         rdfs:label "NOAA Astronomical Low Tide Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAAvalanche
 :NOAAAvalanche rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Avalanche Event" .
+               rdfs:label "NOAA Avalanche Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAABlizzard
 :NOAABlizzard rdf:type owl:Class ;
               rdfs:subClassOf :NOAAHazard ;
               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-              rdfs:label "Blizzard Event" .
+              rdfs:label "NOAA Blizzard Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAACoastalFlood
 :NOAACoastalFlood rdf:type owl:Class ;
                   rdfs:subClassOf :NOAAHazard ;
                   rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                  rdfs:label "Coastal Flood Event" .
+                  rdfs:label "NOAA Coastal Flood Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAColdWindChill
 :NOAAColdWindChill rdf:type owl:Class ;
                    rdfs:subClassOf :NOAAHazard ;
                    rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                   rdfs:label "Cold/Wind Chill Event" .
+                   rdfs:label "NOAA Cold/Wind Chill Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADebrisFlow
 :NOAADebrisFlow rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Debris Flow Event" .
+                rdfs:label "NOAA Debris Flow Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADenseFog
 :NOAADenseFog rdf:type owl:Class ;
               rdfs:subClassOf :NOAAHazard ;
               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-              rdfs:label "Dense Fog Event" .
+              rdfs:label "NOAA Dense Fog Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADenseSmoke
 :NOAADenseSmoke rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Dense Smoke Event" .
+                rdfs:label "NOAA Dense Smoke Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADrought
 :NOAADrought rdf:type owl:Class ;
              rdfs:subClassOf :NOAAHazard ;
              rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-             rdfs:label "Drought Event" .
+             rdfs:label "NOAA Drought Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADustDevil
 :NOAADustDevil rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Dust Devil Event" .
+               rdfs:label "NOAA Dust Devil Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAADustStorm
 :NOAADustStorm rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Dust Storm Event" .
+               rdfs:label "NOAA Dust Storm Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAExcessiveHeat
 :NOAAExcessiveHeat rdf:type owl:Class ;
                    rdfs:subClassOf :NOAAHazard ;
                    rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                   rdfs:label "Excessive Heat Event" .
+                   rdfs:label "NOAA Excessive Heat Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAExtremeColdWindChill
 :NOAAExtremeColdWindChill rdf:type owl:Class ;
                           rdfs:subClassOf :NOAAHazard ;
                           rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                          rdfs:label "Extreme Cold/Wind Chill Event" .
+                          rdfs:label "NOAA Extreme Cold/Wind Chill Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFlashFlood
 :NOAAFlashFlood rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Flash Flood Event" .
+                rdfs:label "NOAA Flash Flood Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFlood
 :NOAAFlood rdf:type owl:Class ;
            rdfs:subClassOf :NOAAHazard ;
            rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-           rdfs:label "Flood Event" .
+           rdfs:label "NOAA Flood Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFreezingFog
 :NOAAFreezingFog rdf:type owl:Class ;
                  rdfs:subClassOf :NOAAHazard ;
                  rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                 rdfs:label "Freezing Fog Event" .
+                 rdfs:label "NOAA Freezing Fog Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFrostFreeze
 :NOAAFrostFreeze rdf:type owl:Class ;
                  rdfs:subClassOf :NOAAHazard ;
                  rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                 rdfs:label "Frost/Freeze Event" .
+                 rdfs:label "NOAA Frost/Freeze Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAFunnelCloud
 :NOAAFunnelCloud rdf:type owl:Class ;
                  rdfs:subClassOf :NOAAHazard ;
                  rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                 rdfs:label "Funnel Cloud Event" .
+                 rdfs:label "NOAA Funnel Cloud Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHail
 :NOAAHail rdf:type owl:Class ;
           rdfs:subClassOf :NOAAHazard ;
           rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-          rdfs:label "Hail Event" .
+          rdfs:label "NOAA Hail Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHazard
@@ -2938,189 +2946,189 @@ xsd:gYear rdf:type rdfs:Datatype .
 :NOAAHeat rdf:type owl:Class ;
           rdfs:subClassOf :NOAAHazard ;
           rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-          rdfs:label "Heat Event" .
+          rdfs:label "NOAA Heat Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHeavyRain
 :NOAAHeavyRain rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Heavy Rain Event" .
+               rdfs:label "NOAA Heavy Rain Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHeavySnow
 :NOAAHeavySnow rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Heavy Snow Event" .
+               rdfs:label "NOAA Heavy Snow Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHighSurf
 :NOAAHighSurf rdf:type owl:Class ;
               rdfs:subClassOf :NOAAHazard ;
               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-              rdfs:label "High Surf Event" .
+              rdfs:label "NOAA High Surf Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHighWind
 :NOAAHighWind rdf:type owl:Class ;
               rdfs:subClassOf :NOAAHazard ;
               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-              rdfs:label "High Wind Event" .
+              rdfs:label "NOAA High Wind Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAHurricane
 :NOAAHurricane rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Hurricane Event" .
+               rdfs:label "NOAA Hurricane Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAIceStorm
 :NOAAIceStorm rdf:type owl:Class ;
               rdfs:subClassOf :NOAAHazard ;
               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-              rdfs:label "Ice Storm Event" .
+              rdfs:label "NOAA Ice Storm Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAALake-EffectSnow
 :NOAALake-EffectSnow rdf:type owl:Class ;
                      rdfs:subClassOf :NOAAHazard ;
                      rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                     rdfs:label "Lake-Effect Snow Event" .
+                     rdfs:label "NOAA Lake-Effect Snow Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAALakeshoreFlood
 :NOAALakeshoreFlood rdf:type owl:Class ;
                     rdfs:subClassOf :NOAAHazard ;
                     rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                    rdfs:label "Lakeshore Flood Event" .
+                    rdfs:label "NOAA Lakeshore Flood Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAALightning
 :NOAALightning rdf:type owl:Class ;
                rdfs:subClassOf :NOAAHazard ;
                rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-               rdfs:label "Lightning Event" .
+               rdfs:label "NOAA Lightning Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineHail
 :NOAAMarineHail rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Marine Hail Event" .
+                rdfs:label "NOAA Marine Hail Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineHighWind
 :NOAAMarineHighWind rdf:type owl:Class ;
                     rdfs:subClassOf :NOAAHazard ;
                     rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                    rdfs:label "Marine High Wind Event" .
+                    rdfs:label "NOAA Marine High Wind Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineHurricaneTyphoon
 :NOAAMarineHurricaneTyphoon rdf:type owl:Class ;
                             rdfs:subClassOf :NOAAHazard ;
                             rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                            rdfs:label "Marine Hurricane/Typhoon Event" .
+                            rdfs:label "NOAA Marine Hurricane/Typhoon Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineStrongWind
 :NOAAMarineStrongWind rdf:type owl:Class ;
                       rdfs:subClassOf :NOAAHazard ;
                       rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                      rdfs:label "Marine Strong Wind Event" .
+                      rdfs:label "NOAA Marine Strong Wind Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineThunderstormWind
 :NOAAMarineThunderstormWind rdf:type owl:Class ;
                             rdfs:subClassOf :NOAAHazard ;
                             rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                            rdfs:label "Marine Thunderstorm Wind Event" .
+                            rdfs:label "NOAA Marine Thunderstorm Wind Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineTropicalDepression
 :NOAAMarineTropicalDepression rdf:type owl:Class ;
                               rdfs:subClassOf :NOAAHazard ;
                               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                              rdfs:label "Marine Tropical Depression Event" .
+                              rdfs:label "NOAA Marine Tropical Depression Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAMarineTropicalStorm
 :NOAAMarineTropicalStorm rdf:type owl:Class ;
                          rdfs:subClassOf :NOAAHazard ;
                          rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                         rdfs:label "Marine Tropical Storm Event" .
+                         rdfs:label "NOAA Marine Tropical Storm Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAARipCurrent
 :NOAARipCurrent rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Rip Current Event" .
+                rdfs:label "NOAA Rip Current Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAASleet
 :NOAASleet rdf:type owl:Class ;
            rdfs:subClassOf :NOAAHazard ;
            rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-           rdfs:label "Sleet Event" .
+           rdfs:label "NOAA Sleet Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAASneakerwave
 :NOAASneakerwave rdf:type owl:Class ;
                  rdfs:subClassOf :NOAAHazard ;
                  rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                 rdfs:label "Sneakerwave Event" .
+                 rdfs:label "NOAA Sneakerwave Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAStormSurgeTide
 :NOAAStormSurgeTide rdf:type owl:Class ;
                     rdfs:subClassOf :NOAAHazard ;
                     rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                    rdfs:label "Storm Surge/Tide Event" .
+                    rdfs:label "NOAA Storm Surge/Tide Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAStrongWind
 :NOAAStrongWind rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Strong Wind Event" .
+                rdfs:label "NOAA Strong Wind Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAThunderstormWind
 :NOAAThunderstormWind rdf:type owl:Class ;
                       rdfs:subClassOf :NOAAHazard ;
                       rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                      rdfs:label "Thunderstorm Wind Event" .
+                      rdfs:label "NOAA Thunderstorm Wind Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAATornado
 :NOAATornado rdf:type owl:Class ;
              rdfs:subClassOf :NOAAHazard ;
              rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-             rdfs:label "Tornado Event" .
+             rdfs:label "NOAA Tornado Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAATropicalDepression
 :NOAATropicalDepression rdf:type owl:Class ;
                         rdfs:subClassOf :NOAAHazard ;
                         rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                        rdfs:label "Tropical Depression Event" .
+                        rdfs:label "NOAA Tropical Depression Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAATropicalStorm
 :NOAATropicalStorm rdf:type owl:Class ;
                    rdfs:subClassOf :NOAAHazard ;
                    rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                   rdfs:label "Tropical Storm Event" .
+                   rdfs:label "NOAA Tropical Storm Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWaterspout
 :NOAAWaterspout rdf:type owl:Class ;
                 rdfs:subClassOf :NOAAHazard ;
                 rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                rdfs:label "Waterspout Event" .
+                rdfs:label "NOAA Waterspout Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWildfire
@@ -3128,21 +3136,21 @@ xsd:gYear rdf:type rdfs:Datatype .
               rdfs:subClassOf :NOAAHazard ,
                               :Wildfire ;
               rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-              rdfs:label "Wildfire Event" .
+              rdfs:label "NOAA Wildfire Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWinterStorm
 :NOAAWinterStorm rdf:type owl:Class ;
                  rdfs:subClassOf :NOAAHazard ;
                  rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                 rdfs:label "Winter Storm Event" .
+                 rdfs:label "NOAA Winter Storm Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NOAAWinterWeather
 :NOAAWinterWeather rdf:type owl:Class ;
                    rdfs:subClassOf :NOAAHazard ;
                    rdfs:comment "Source - NOAA (https://www.ncdc.noaa.gov/stormevents/ftp.jsp)" ;
-                   rdfs:label "Winter Weather Event" .
+                   rdfs:label "NOAA Winter Weather Event" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/NWZone
@@ -3171,7 +3179,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/OutOfAreaResponseFire
 :OutOfAreaResponseFire rdf:type owl:Class ;
-                       rdfs:subClassOf :Fire .
+                       rdfs:subClassOf :Fire ;
+                       rdfs:label "Out Of Area Response Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/PARC
@@ -3183,7 +3192,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/PrescribedFire
 :PrescribedFire rdf:type owl:Class ;
-                rdfs:subClassOf :Fire .
+                rdfs:subClassOf :Fire ;
+                rdfs:label "Prescribed Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Program
@@ -3533,12 +3543,15 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/Wildfire
-:Wildfire rdf:type owl:Class .
+:Wildfire rdf:type owl:Class ;
+          rdfs:subClassOf :Fire ;
+          rdfs:label "Wildfire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/WildlandFireUse
 :WildlandFireUse rdf:type owl:Class ;
-                 rdfs:subClassOf :Fire .
+                 rdfs:subClassOf :Fire ;
+                 rdfs:label "Wildland Fire" .
 
 
 ###  http://stko-kwg.geog.ucsb.edu/lod/ontology/WindMagnitudeObservationCollection
@@ -3853,7 +3866,8 @@ xsd:gYear rdf:type rdfs:Datatype .
 <http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class ;
                                               owl:disjointWith <http://www.w3.org/ns/sosa/ObservableProperty> ,
                                                                <http://www.w3.org/ns/sosa/Observation> ,
-                                                               <http://www.w3.org/ns/sosa/ObservationCollection> .
+                                                               <http://www.w3.org/ns/sosa/ObservationCollection> ;
+                                              rdfs:label "Feature Of Interest" .
 
 
 ###  http://www.w3.org/ns/sosa/ObservableProperty
@@ -5156,6 +5170,13 @@ xsd:gYear rdf:type rdfs:Datatype .
                                                   rdfs:label "open" .
 
 
+###  http://stko-kwg.geog.ucsb.edu/lod/resource/overlapArea.squareMeter
+<http://stko-kwg.geog.ucsb.edu/lod/resource/overlapArea.squareMeter> rdf:type owl:NamedIndividual ,
+                                                                              :SoilMapUnitObservableProperty ;
+                                                                     rdfs:comment "overlap area in square meters" ;
+                                                                     rdfs:label "overlapArea" .
+
+
 ###  http://stko-kwg.geog.ucsb.edu/lod/resource/psychiatric
 <http://stko-kwg.geog.ucsb.edu/lod/resource/psychiatric> rdf:type owl:NamedIndividual ,
                                                                   :HospitalType ;
@@ -5682,6 +5703,13 @@ xsd:gYear rdf:type rdfs:Datatype .
   owl:onProperty :startsFrom ;
   owl:someValuesFrom :RoadSegmentNode ;
   rdfs:subClassOf :RoadSegment
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :target ;
+  owl:someValuesFrom :S2Cell ;
+  rdfs:subClassOf :SoilMapUnitOverlapObservation
 ] .
 
 
@@ -6417,6 +6445,13 @@ xsd:gYear rdf:type rdfs:Datatype .
   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
   owl:someValuesFrom :SoilMapUnitObservableProperty ;
   rdfs:subClassOf :SoilMapUnitObservation
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+  owl:someValuesFrom :SoilMapUnitObservableProperty ;
+  rdfs:subClassOf :SoilMapUnitOverlapObservation
 ] .
 
 
