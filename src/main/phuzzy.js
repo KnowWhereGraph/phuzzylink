@@ -29,7 +29,6 @@ function parse_wkt(s_ewkt) {
 
 	// geometry type
 	let h_geojson = wellknown(s_wkt);
-	console.log(h_geojson)
 
 	// bad wkt
 	if(!h_geojson) {
@@ -613,7 +612,6 @@ class ResourceChannel {
 		//console.log(p_predicate);
 
 		let k_phuzzy = this.phuzzy;
-		//console.log(k_phuzzy)
 
 		// deconstruct local fields
 		let {
@@ -635,101 +633,6 @@ class ResourceChannel {
 		if('uri' === h_term.type) {
 			let p_term = h_term.value;
 			k_phuzzy.linkify(p_term, d_cell, s_label || h_term.label);
-
-			// special flattening
-			
-			// for directrelief:City map rendering  (Updated by Rui)
-			// if (p_term.startsWith('https://stko-directrelief.geog.ucsb.edu/lod/place/') && 
-			// 	p_predicate === "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"){
-
-			// 	let p_tile_server = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}';
-			// 	let d_map = Object.assign(document.createElement('div'), {
-			// 				id: 'map',
-			// 			});
-			// 	document.querySelector('#abstract').appendChild(d_map);
-				
-			// 	d_map.style.opacity = '1';
-			// 	d_map.style.display = 'inline-block';
-			// 	d_map.style.height = '300px';
-
-			// 	y_map = L.map(d_map, {
-			// 		layers: [
-			// 					// initialize tile layer
-			// 			L.tileLayer(p_tile_server, {
-			// 						maxZoom: 19,
-			// 						detectRetina: true,
-			// 					}),
-			// 				],
-			// 	});
-
-			// 	y_map.invalidateSize();
-
-			// 	// reset feature group
-			// 	y_feature_group = L.featureGroup();
-			// 	y_feature_group.addTo(y_map);
-								
-			// 	this.download_query_results(/* syntax: sparq */ `
-			// 		prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-			// 		prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-			// 		prefix geo: <http://www.opengis.net/ont/geosparql#>
-			// 		select * {
-			// 			<${p_term}> geo:hasGeometry ?geom .
-			// 			?geom geo:asWKT ?wkt .
-			// 		}
-			// 	`, 100, 0, this.loader.sparql_mime, (a_rows) => {
-			// 		let y_feature;
-
-			// 		for(let {wkt:g_wkt} of a_rows) {
-			// 			let s_wkt = factory.from.sparql_result(g_wkt).value;
-
-			// 			// parse well known text
-			// 			y_feature = parse_wkt(s_wkt);
-			// 		}
-
-			// 		try {
-			// 			document.querySelector('#abstract').removeChild(document.querySelector('#map'));
-			// 		}
-			// 		catch(e_remove) {
-			// 			console.error(e_remove);
-			// 		}
-
-			// 		// valid feature
-			// 		if(y_feature) {
-			// 			//let p_tile_server = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}';
-
-			// 			//let d_map = Object.assign(document.createElement('div'), {
-			// 			//	id: 'map',
-			// 			//});
-			// 			//document.querySelector('#abstract').appendChild(d_map);
-
-			// 			// full opacity
-			// 			// d_map.style.opacity = '1';
-			// 			// d_map.style.display = 'inline-block';
-			// 			// d_map.style.height = '300px';
-
-			// 			// y_map = L.map(d_map, {
-			// 			// 	layers: [
-			// 			// 		// initialize tile layer
-			// 			// 		L.tileLayer(p_tile_server, {
-			// 			// 			maxZoom: 19,
-			// 			// 			detectRetina: true,
-			// 			// 		}),
-			// 			// 	],
-			// 			// });
-
-			// 			// y_map.invalidateSize();
-
-			// 			// // reset feature group
-			// 			// y_feature_group = L.featureGroup();
-			// 			// y_feature_group.addTo(y_map);
-
-			// 			// add to feature group
-			// 			y_feature_group.addLayer(y_feature);
-				
-			// 			f_fit_map();
-			// 		}
-			// 	});
-			// }
 
 			// it will be passed if there is no list in the KG
 			if(p_term.startsWith('http://ld.iospress.nl/rdf/contributor/List.')) {
@@ -844,8 +747,6 @@ class ResourceChannel {
 			//else if(p_term.startsWith('http://stko-roy.geog.ucsb.edu/lod/resource/geometry.')) {
 			else if(p_term.startsWith('http://stko-kwg.geog.ucsb.edu/lod/resource/geometry.')) {
 
-				console.log("find a geometry")
-
 				this.download_query_results(/* syntax: sparq */ `
 					prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 					prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -861,7 +762,6 @@ class ResourceChannel {
 						let s_wkt = factory.from.sparql_result(g_wkt).value;
 						// parse well known text
 						y_feature = parse_wkt(s_wkt);
-						console.log(y_feature)
 
 					}
 
@@ -1345,11 +1245,17 @@ class ResourceChannel {
 		let i_insert_value = -1;
 		let p_previous_predicate = '';
 
+		// A list of predicates that we want to avoid rendering in the UI
+		let skipList = ["http://stko-kwg.geog.ucsb.edu/lod/ontology/sfContains", "http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"]
 		// each binding result row
 		a_bindings.forEach((h_row) => {
-			//console.log(h_row) // only have predicate and subject
 			// ref predicate iri
 			let p_predicate = h_row.predicate.value;
+
+			// Avoid rendering any of the predicates in the skip list
+      if (skipList.indexOf(p_predicate) > -1) {
+        return;
+      }
 
 			// special case handling
 			if('http://ld.iospress.nl/rdf/ontology/partOf' === p_predicate) {
@@ -1458,7 +1364,6 @@ class ResourceChannel {
 						if(s_terse.length > 17) {
 							d_cell_predicate.classList.add('long-name');
 						}
-
 						// inverse mode
 						if('incoming' === this.key) {
 							d_cell_predicate.classList.add('inverse');
@@ -1570,9 +1475,6 @@ class ResourceChannel {
 
 			// move over to completed set
 			as_complete_pairs.add(p_predicate);
-
-			// trigger
-			console.info('completed '+p_predicate);
 
 			// fetch row decriptor
 			let h_row = this.existing_rows[p_predicate];
@@ -2341,18 +2243,6 @@ class Phuzzy {
 		].forEach(d_e => d_cell.appendChild(d_e));
 
 		d_cell.classList.add('named-node');
-
-		// let d_link = document.createElement('a');
-		// d_link.href = `#${s_resource}`;
-		// d_link.textContent = s_text;
-
-		// d_cell.appendChild(d_link);
-		// d_cell.classList.add('named-node');
-
-		// let d_external = document.createElement('a');
-		// d_external.classList.add('fa', 'fa-external-link');
-		// d_cell.appendChild(d_external);
-
 		return s_text;
 	}
 
