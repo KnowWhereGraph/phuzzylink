@@ -29,25 +29,6 @@ body {
   font-family: sans-serif !important;
 }
 
-.left_container li {
-  list-style: none;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-}
-
-.left_container {
-  min-height: 40px;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 .navbar-inner {
   margin: 0 auto;
   text-align: center;
@@ -130,9 +111,6 @@ ul.site_menu {
   background-color: black !important;
 }
 
-.left_container ul {
-  padding-left: 1%;
-}
 
 .mousePointer {
   cursor: pointer;
@@ -190,9 +168,8 @@ body.loading .loadingWaitIcon {
 
 #header img {
   vertical-align: middle;
-  margin: 10px 0;
-  max-width: 100%;
   object-fit: contain;
+  margin-left: 45rem !important;
 }
 
 .skiplinks {
@@ -277,13 +254,6 @@ header .right_container {
   padding-right: 15%;
 }
 
-.left_container li {
-  list-style: none;
-  float: left;
-  color: #fff;
-  text-align: inherit;
-}
-
 .right_container ul {
   padding-top: 1.5%;
   font-size: 13px;
@@ -309,10 +279,6 @@ header .right_container {
 footer .site_caption {
     padding-top: 3%
 }*/
-
-.left_container {
-  min-height: 15px;
-}
 
 /* footer .middle_container,
 footer .right_container {
@@ -344,12 +310,9 @@ header .logo {
 }
 
 header .header-menu {
-  /*clear: both;*/
-  text-align: right;
-  display: inline-block;
-  float: right;
   padding: 14px 0;
   font-size: 14px;
+  margin-right: 25rem;
 }
 
 header .header-menu {
@@ -378,9 +341,6 @@ header a {
   }
   header .header-menu {
     padding: 14px 0;
-  }
-  .left_container {
-    min-height: 40px;
   }
 }
 
