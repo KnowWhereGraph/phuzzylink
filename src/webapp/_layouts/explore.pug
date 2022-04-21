@@ -19,29 +19,24 @@ html(lang='en')
   body
     .body-content
       header#header.header.block
-        a#header-skiplink.skiplinks(href='#nav-skiplink')
-        .container
-          .left_container.col-sm-6.header-mobile-menu(style='padding-left: -250px;')
-            img.logo(src='/static/images/logo-kwg.svg')
-            script.
-              function toggle_menu(option) {
-                $('#open-menu .hamburger-menu-container').removeClass('change');
-                $('#menu').removeClass('show');
-              }
-              function toggle_open(d_unit) {
-                [...document.querySelectorAll('.dropdown.open')].forEach(d => (d !== d_unit) && d.classList.toggle('open'));
-                d_unit.classList.toggle('open');
-              }
+          a(href="https://knowwheregraph.org/")
+            img.logo(class="header-logo" src='/static/images/logo-kwg.svg')
           #menu.header-menu.clearfix.menu(style='padding: 18px 0;')
             ul.nav.navbar-nav.navbar-right
+              li 
+                a(href="https://www.knowwheregraph.org/graph/") The Graph
               li
-                a(href="https://stko-kwg.geog.ucsb.edu/#/about/") About
+                a(href="https://www.knowwheregraph.org/tools/") Tools
               li
-                a(href="http://stko-kwg.geog.ucsb.edu/lod/ontology") Schema
+                a(href="https://www.knowwheregraph.org/pilots/") Pilots
               li
-                a(href="https://stko-kwg.geog.ucsb.edu/#/explore/") Explore
+                a(href="https://www.knowwheregraph.org/people/") People
               li
-                a(href="https://stko-kwg.geog.ucsb.edu/#/result_search?tab=hazard") Search
+                a(href="https://www.knowwheregraph.org/publications/") Publications
+              li
+                a(href="https://www.knowwheregraph.org/about/") About
+              li
+                a(href="https://www.knowwheregraph.org/contact/") Contact
       #title
         a(href='http://phuzzy.link/') phuzzy.link
       #controls
