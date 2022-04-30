@@ -249,9 +249,8 @@ const H_PREFIXES = {
 
 
 	//kwgr: 'http://stko-roy.geog.ucsb.edu/lod/resource/',
-	//'kwg-ong':'http://stko-roy.geog.ucsb.edu/lod/ontology/',
 	kwgr: 'http://stko-kwg.geog.ucsb.edu/lod/resource/',
-	'kwg-ong':'http://stko-kwg.geog.ucsb.edu/lod/ontology/',
+	'kwg-ont':'http://stko-kwg.geog.ucsb.edu/lod/ontology/',
 	//directrelief: 'https://stko-directrelief.geog.ucsb.edu/lod/ontology/' ,
 	//'dr-affiliation': 'https://stko-directrelief.geog.ucsb.edu/lod/affiliation/' ,
     //'dr-people': 'https://stko-directrelief.geog.ucsb.edu/lod/people/' ,
