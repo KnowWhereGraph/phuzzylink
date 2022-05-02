@@ -1245,14 +1245,15 @@ class ResourceChannel {
 		let i_insert_value = -1;
 		let p_previous_predicate = '';
 
-		// A list of predicates that we want to avoid rendering in the UI
-		let skipList = ["http://stko-kwg.geog.ucsb.edu/lod/ontology/sfContains", "http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"]
+    // A list of predicates that we want to avoid rendering in the UI.
+    // Avoid showing spatialRelation because all of its subclasses will be shown
+    let skipList = ["http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"]
 		// each binding result row
 		a_bindings.forEach((h_row) => {
 			// ref predicate iri
 			let p_predicate = h_row.predicate.value;
 
-			// Avoid rendering any of the predicates in the skip list
+      // Avoid rendering any of the predicates in the skip list
       if (skipList.indexOf(p_predicate) > -1) {
         return;
       }
@@ -1347,9 +1348,6 @@ class ResourceChannel {
 						// mk whole row
 						let d_row = document.createElement('div');
 						d_row.classList.add('row');
-						if('subject' === this.key) {
-							d_row.classList.add('inverse');
-						}
 						d_row.setAttribute('data-predicate', p_predicate);
 						d_row.appendChild(d_cell_predicate);
 						d_row.appendChild(d_values_cell);
@@ -1363,11 +1361,6 @@ class ResourceChannel {
 						// predicate has long name
 						if(s_terse.length > 17) {
 							d_cell_predicate.classList.add('long-name');
-						}
-						// inverse mode
-						if('incoming' === this.key) {
-							d_cell_predicate.classList.add('inverse');
-							d_values_cell.classList.add('inverse');
 						}
 
 						// make object
@@ -1565,32 +1558,6 @@ class ResourceLoader {
 					}
 					group by ?predicate ?object
 					order by ?predicate ?object
-				`, n_chunk_size, () => {
-					fk_task();
-				});
-			},
-
-			(fk_task) => {
-				k_incoming.download_triples(`
-					select distinct ?subject ?predicate (group_concat(?subject_label_each; separator=" / ") as ?subject_label) (sample(?predicate_label_any) as ?predicate_label) {
-						{
-							?subject ?predicate ${sv1_resource} .
-						} union {
-							?subject ?predicate [
-								?rdfn ${sv1_resource} ;
-							] .
-							filter(strstarts(str(?rdfn), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
-						}
-						optional {
-							?subject rdfs:label ?subject_label_each .
-						}
-						optional {
-							?predicate rdfs:label ?predicate_label_any .
-						}
-						filter(!isBlank(?subject))
-					}
-					group by ?predicate ?subject
-					order by ?predicate ?subject
 				`, n_chunk_size, () => {
 					fk_task();
 				});
