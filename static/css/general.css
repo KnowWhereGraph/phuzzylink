@@ -169,7 +169,16 @@ body.loading .loadingWaitIcon {
 #header img {
   vertical-align: middle;
   object-fit: contain;
-  margin-left: 45rem !important;
+  margin-left: 20%;
+}
+
+@media screen and (max-width: 1300px) {
+  #header img {
+    margin-left: 5%;
+  }
+  #menu {
+    margin-right: 0px;
+  }
 }
 
 .skiplinks {
