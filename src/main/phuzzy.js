@@ -608,9 +608,6 @@ class ResourceChannel {
 	}
 
 	render_value(h_term, p_predicate, s_label='') {
-		//console.log(h_term);
-		//console.log(p_predicate);
-
 		let k_phuzzy = this.phuzzy;
 
 		// deconstruct local fields
@@ -746,7 +743,6 @@ class ResourceChannel {
 			//else if(p_term.startsWith('https://stko-directrelief.geog.ucsb.edu/lod/place/Geometry.')) {
 			//else if(p_term.startsWith('http://stko-roy.geog.ucsb.edu/lod/resource/geometry.')) {
 			else if(p_term.startsWith('http://stko-kwg.geog.ucsb.edu/lod/resource/geometry.')) {
-
 				this.download_query_results(/* syntax: sparq */ `
 					prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 					prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -762,7 +758,6 @@ class ResourceChannel {
 						let s_wkt = factory.from.sparql_result(g_wkt).value;
 						// parse well known text
 						y_feature = parse_wkt(s_wkt);
-
 					}
 
 					try {
@@ -1213,10 +1208,28 @@ class ResourceChannel {
 			this.stats.triples += a_bindings.length;
 			this.update_status('Loaded '+this.stats.triples+' triples...');
 		}
-
+    // Predicates that we want to ALWAYS hide from the user interface
+    // spatialRelation: This is a super class for spatial relations. Since the subclasses are already
+    // shown, hide this one.
+    let skipList = ["http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"]
 		// ref phuzzy instance
 		let k_phuzzy = this.phuzzy;
 
+    // If this function is processing incoming predicates (?s ?p <this-feature>) get a list of the existing predicates 
+    // so that we can determine if we want to avoid showing any incoming.
+    let outgoingPredicates = Array()
+    this.elements.table.childNodes.forEach((child) => {
+      outgoingPredicates.push(child.dataset.predicate);
+    })
+
+    // If there's an outgoing "isFeatureOfInterestOf", avoid incoming "hasFeatureOfInterest"
+    if (outgoingPredicates.indexOf("http://www.w3.org/ns/sosa/isFeatureOfInterestOf") > -1) {
+      skipList.push("http://www.w3.org/ns/sosa/hasFeatureOfInterest");
+    }
+    // If there's an outgoing "locatedIn", avoid the incoming "contains" predicate
+    if (outgoingPredicates.indexOf("http://stko-kwg.geog.ucsb.edu/lod/ontology/sfWithin") > -1) {
+      skipList.push("http://stko-kwg.geog.ucsb.edu/lod/ontology/sfContains");
+    }
 
 		// triples hash for serialization
 		let h_triples = this.triples;
@@ -1225,13 +1238,11 @@ class ResourceChannel {
 		let s_value_key = this.key;
 		let s_label_key = `${this.key}_label`;
 
-
 		// ref pairs hash
 		let h_existing_rows = this.existing_rows;
 
 		// pairs that arrived this round
 		let h_new_pairs = {};
-
 
 		// primary predicate
 		let p_primary_predicate = a_bindings[0].predicate.value;
@@ -1245,19 +1256,13 @@ class ResourceChannel {
 		let i_insert_value = -1;
 		let p_previous_predicate = '';
 
-    // A list of predicates that we want to avoid rendering in the UI.
-    // Avoid showing spatialRelation because all of its subclasses will be shown
-    let skipList = ["http://stko-kwg.geog.ucsb.edu/lod/ontology/spatialRelation"]
 		// each binding result row
 		a_bindings.forEach((h_row) => {
 			// ref predicate iri
 			let p_predicate = h_row.predicate.value;
-
-      // Avoid rendering any of the predicates in the skip list
       if (skipList.indexOf(p_predicate) > -1) {
         return;
       }
-
 			// special case handling
 			if('http://ld.iospress.nl/rdf/ontology/partOf' === p_predicate) {
 				if('http://ld.iospress.nl/rdf/ontology/articleInIssue' in h_existing_rows
@@ -1348,6 +1353,9 @@ class ResourceChannel {
 						// mk whole row
 						let d_row = document.createElement('div');
 						d_row.classList.add('row');
+						if('subject' === this.key) {
+							d_row.classList.add('inverse');
+						}
 						d_row.setAttribute('data-predicate', p_predicate);
 						d_row.appendChild(d_cell_predicate);
 						d_row.appendChild(d_values_cell);
@@ -1361,6 +1369,12 @@ class ResourceChannel {
 						// predicate has long name
 						if(s_terse.length > 17) {
 							d_cell_predicate.classList.add('long-name');
+						}
+
+						// inverse mode
+						if('incoming' === this.key) {
+							d_cell_predicate.classList.add('inverse');
+							d_values_cell.classList.add('inverse');
 						}
 
 						// make object
@@ -1544,7 +1558,7 @@ class ResourceLoader {
 		let n_chunk_size = k_phuzzy.chunk_size;
 
 		// at same time
-		async.parallel([
+		async.series([
 			(fk_task) => {
 				k_outgoing.download_triples(`
 					select distinct ?predicate ?object (sample(?predicate_label_any) as ?predicate_label) (group_concat(?object_label_each; separator=" / ") as ?object_label) {
@@ -1558,6 +1572,32 @@ class ResourceLoader {
 					}
 					group by ?predicate ?object
 					order by ?predicate ?object
+				`, n_chunk_size, () => {
+					fk_task();
+				});
+			},
+
+			(fk_task) => {
+				k_incoming.download_triples(`
+					select distinct ?subject ?predicate (group_concat(?subject_label_each; separator=" / ") as ?subject_label) (sample(?predicate_label_any) as ?predicate_label) {
+						{
+							?subject ?predicate ${sv1_resource} .
+						} union {
+							?subject ?predicate [
+								?rdfn ${sv1_resource} ;
+							] .
+							filter(strstarts(str(?rdfn), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
+						}
+						optional {
+							?subject rdfs:label ?subject_label_each .
+						}
+						optional {
+							?predicate rdfs:label ?predicate_label_any .
+						}
+						filter(!isBlank(?subject))
+					}
+					group by ?predicate ?subject
+					order by ?predicate ?subject
 				`, n_chunk_size, () => {
 					fk_task();
 				});
