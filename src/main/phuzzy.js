@@ -263,40 +263,6 @@ class ResourceChannel {
 		this.open_xhrs.clear();
 	}
 
-	completeness(i_start_set, n_direction) {
-		let {
-			result_sets_complete: as_complete,
-			result_sets_complete_mono: as_mono,
-		} = this;
-
-		// iterate
-		for(let i_set=i_start_set; ; i_set+=n_direction) {
-			// hit first set
-			if(!i_set) {
-				// as long as it is complete we're good
-				return as_complete.has(0);
-			}
-
-			// set is complete
-			if(as_complete.has(i_set)) {
-				// but it is full of same predicate
-				if(as_mono.has(i_set)) {
-					// keep trying
-					continue;
-				}
-				// not mono!
-				else {
-					return true;
-				}
-			}
-			// set is incomplete
-			else {
-				return false;
-			}
-		}
-	}
-
-
 	predicate_index(p_predicate) {
 		let k_phuzzy = this.phuzzy;
 		let sct = k_phuzzy.concise(p_predicate);
@@ -317,7 +283,6 @@ class ResourceChannel {
 		return ar_rules.length;
 	}
 
-
 	download_triples(s_query, n_chunk_size, fk_download) {
 		// update status
 		this.update_status('Querying endpoint...');
@@ -330,10 +295,9 @@ class ResourceChannel {
 		});
 	}
 
-
-	query_triples(s_query, n_chunk_size, fk_triples) {
+	query_triples(s_query, n_chunk_size, fk_triples, offset=0) {
 		// download using limit/offset
-		this.download_query_results(s_query, n_chunk_size, 0, this.loader.sparql_mime, (a_bindings) => {
+		this.download_query_results(s_query, n_chunk_size, offset, this.loader.sparql_mime, (a_bindings) => {
 			// results size
 			let n_results = a_bindings.length;
 
@@ -350,84 +314,18 @@ class ResourceChannel {
 			}
 			// yes results
 			else {
-				// assume not terminal
-				let b_terminal = false;
-
-				// results under chunk size
-				if(n_chunk_size !== n_results) {
-					// abort pre-emptive 2nd request
-					this.abort();
-
-					// it is terminal
-					b_terminal = true;
-				}
-
 				// process results
-				this.process_results(a_bindings, 0, b_terminal);
+				this.process_results(a_bindings, 0);
 
-				// this was last result set
-				if(b_terminal) {
-					// only if this wasn't already finished
-					if(!this.finished) {
-						// no more requests
-						fk_triples();
-					}
-				}
-			}
-		});
-
-		// pre-emptively download 2nd offset
-		let c_offset = n_chunk_size;
-
-		// callback handler for chunked download
-		let f_chunked_download = (a_bindings) => {
-			// results size
-			let n_results = a_bindings.length;
-
-			// no results
-			if(!n_results) {
 				// only if this wasn't already finished
 				if(!this.finished) {
-					// no more requests :)
+					// no more requests
 					fk_triples();
 				}
 			}
-			// yes results
-			else {
-				// assume not terminal
-				let b_terminal = false;
-
-				// results met chunk size
-				if(n_chunk_size === n_results) {
-					// queue next download
-					c_offset += n_chunk_size;
-					this.download_query_results(s_query, n_chunk_size, c_offset, this.loader.sparql_mime, f_chunked_download);
-				}
-				// results under chunk size
-				else {
-					// it is terminal
-					b_terminal = true;
-				}
-
-				// process results
-				this.process_results(a_bindings, c_offset/n_chunk_size, b_terminal);
-
-				// this was last result set
-				if(b_terminal) {
-					// only if this wasn't already finished
-					if(!this.finished) {
-						// no more requests
-						fk_triples();
-					}
-				}
-			}
-		};
-
-		// begin chunked download
-		this.download_query_results(s_query, n_chunk_size, c_offset, this.loader.sparql_mime, f_chunked_download);
+		});
 	}
 
-	// 
 	download_query_results(s_query, n_limit, n_offset, s_mime, fk_results) {
 		// mutate query string
 		s_query += ` limit ${n_limit} offset ${n_offset}`;
@@ -896,18 +794,6 @@ class ResourceChannel {
 			// add class
 			d_cell.classList.add('blank-node');
 
-			// union {
-			// 		# also as list
-			// 		<${this.loader.resource}> <${p_predicate}> _:b0 .
-
-			// 		_:b0 rdf:rest*/rdf:first ?collection_item .
-
-			// 		optional {
-			// 			?collection_item rdfs:label ?collection_label .
-			// 		}
-			// 	} 
-
-			// 
 			this.download_query_results(/* syntax: sparq */ `
 				prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 				prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -1201,8 +1087,52 @@ class ResourceChannel {
 		}
 	}
 
+    /**
+   * Queries information (object in ?s ?p ?o) about a subject and triple. It's called when
+   * data needs to be paginated back to the user.
+   * 
+   * @param {String} subject The subject being asked about
+   * @param {String} predicate The predicate for the subject whose objects are being requested
+   * @param {Number} offset The offset at which triples after should be returned
+   * @param {String} direction Either "incoming" or "outgoing" to represent the direction of query
+   */
+  paginate_query(_self, subject, predicate, offset, direction) {
+    let query = '';
+    if (direction === "outgoing") {
+    query = `SELECT DISTINCT ?predicate ?object (sample(?predicate_label_any) as ?predicate_label) (group_concat(?object_label_each; separator=" / ") as ?object_label) {
+      BIND(<${predicate}> AS ?predicate)
+      <${subject}> ?predicate ?object .
+      OPTIONAL {
+        ?object rdfs:label ?object_label_each .
+      }
+    }
+    GROUP BY ?predicate ?object
+    ORDER BY ?predicate ?object`;
+    } else {
+      query = `SELECT DISTINCT ?subject ?predicate (group_concat(?subject_label_each; separator=" / ") as ?subject_label) (sample(?predicate_label_any) as ?predicate_label) {
+        {
+          ?subject ?predicate <${subject}> .
+        } union {
+          ?subject ?predicate [
+            ?rdfn <${predicate}> ;
+          ] .
+          filter(strstarts(str(?rdfn), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
+        }
+        optional {
+          ?subject rdfs:label ?subject_label_each .
+        }
+        optional {
+          ?predicate rdfs:label ?predicate_label_any .
+        }
+        filter(!isBlank(?subject))
+      }
+      group by ?predicate ?subject
+      order by ?predicate ?subject`;
+    }
+  _self.query_triples(this.phuzzy.sparql_query_header+query, 50, () => { }, offset);
+  }
 
-	process_results(a_bindings, i_set, b_terminal) {
+	process_results(a_bindings, i_set) {
 		// update status
 		if(a_bindings.length) {
 			this.stats.triples += a_bindings.length;
@@ -1244,12 +1174,6 @@ class ResourceChannel {
 		// pairs that arrived this round
 		let h_new_pairs = {};
 
-		// primary predicate
-		let p_primary_predicate = a_bindings[0].predicate.value;
-
-		// terminal predicate
-		let p_terminal_predicate = a_bindings[a_bindings.length-1].predicate.value;
-
 		let as_prefixes_used = this.prefixes_used;
 
 		// help speed up insertion by keeping an index tracker
@@ -1288,17 +1212,13 @@ class ResourceChannel {
 					return;
 				}
 			}
-
 			// ref value from entry
+
 			let h_value = h_row[s_value_key];
 			let h_label = h_row[s_label_key];
-			//console.log(h_value) // Object { type: "uri", value: "https://stko-directrelief.geog.ucsb.edu/lod/place/City.Ann_Arbor" }
-
 			// concise predicate and value
 			let sct_predicate = k_phuzzy.concise(p_predicate);
 			let sct_value = this.sparql_result_ct(h_value);
-			//console.log(sct_value) //dr-place:City.Ann_Arbor 
-
 			// add prefixes used to set
 			if('>' !== sct_predicate[0]) {
 				as_prefixes_used.add(sct_predicate.substring(0, sct_predicate.indexOf(':')));
@@ -1325,7 +1245,6 @@ class ResourceChannel {
 				if(!h_new_pairs[p_predicate]) {
 					// now predicate has been encountered
 					let a_values = h_new_pairs[p_predicate] = [h_value];
-
 					// predicate has been encountered in a separate loading
 					if(p_predicate in h_existing_rows) {
 						// insert new value wherever it belongs
@@ -1348,6 +1267,7 @@ class ResourceChannel {
 						// mk value list
 						let d_values_list = document.createElement('div');
 						d_values_list.classList.add('values-list');
+            d_values_list.classList.add(p_predicate);
 						d_values_cell.appendChild(d_values_list);
 
 						// mk whole row
@@ -1355,7 +1275,10 @@ class ResourceChannel {
 						d_row.classList.add('row');
 						if('subject' === this.key) {
 							d_row.classList.add('inverse');
-						}
+              d_row.setAttribute("direction", "incoming")
+						} else {
+              d_row.setAttribute("direction", "outgoing")
+            }
 						d_row.setAttribute('data-predicate', p_predicate);
 						d_row.appendChild(d_cell_predicate);
 						d_row.appendChild(d_values_cell);
@@ -1384,6 +1307,18 @@ class ResourceChannel {
 							value_list: d_values_list,
 							values: a_values,
 						};
+            // Capture the variables out of 'this' that we need in the event handler
+            let subject = this.loader.resource;
+            let _self = this;
+            d_values_list.addEventListener('scroll', function() {
+                // +1 for the border
+                if ($(this).scrollTop() +  $(this).innerHeight() +1 >=  $(this)[0].scrollHeight) {
+                  let direction = this.parentNode.parentNode.getAttribute("direction");
+                  let predicate = this.parentNode.parentNode.getAttribute("data-predicate");
+                  let offset = this.children.length;
+                  _self.paginate_query(_self, subject, predicate, offset, direction);
+                }
+            });
 
 						// insert new value at beginning
 						i_insert_value = this.add_triple(p_predicate, h_value, 0, h_label);
@@ -1408,106 +1343,8 @@ class ResourceChannel {
 			// update previous predicate
 			p_previous_predicate = p_predicate;
 		});
-
-
-		// primary and terminal are different
-		if(p_primary_predicate !== p_terminal_predicate) {
-			// primary predicate complete if:
-			let b_primary_complete = 0 === i_set  // this is first result set
-				|| this.completeness(i_set, -1);  // previous result set(s) complete
-
-			// terminal predicate complete if:
-			let b_terminal_complete = b_terminal  // this is the last result set
-				|| this.completeness(i_set, +1);  // next result set(s) complete
-
-			// move all completed pairs over from partial set
-			for(let p_predicate in h_new_pairs) {
-				// whether or not the given pair is complete
-				let b_complete = false;
-
-				// primary predicate
-				if(p_primary_predicate === p_predicate) {
-					// it is complete
-					if(b_primary_complete) {
-						b_complete = true;
-					}
-				}
-				// terminal prediate
-				else if(p_terminal_predicate === p_predicate) {
-					// it is complete
-					if(b_terminal_complete) {
-						b_complete = true;
-					}
-				}
-				// neither primary nor terminal
-				else {
-					// it is contained
-					b_complete = true;
-				}
-
-				// pair is complete
-				if(b_complete) {
-					// complete row
-					this.complete_row(p_predicate);
-				}
-			}
-		}
-		// primary and terminal are same
-		else {
-			// however, (first result set or previous result set is complete) and this is the last set
-			if(b_terminal && (!i_set || this.completeness(i_set, -1))) {
-				this.complete_row(p_primary_predicate);
-			}
-		}
-	}
-
-	// process finishing callbacks for row
-	complete_row(p_predicate) {
-		// deconstruct local fields
-		let {
-			complete_pairs: as_complete_pairs,
-			phuzzy: k_phuzzy,
-		} = this;
-
-		// but it already was complete?
-		if(as_complete_pairs.has(p_predicate)) {
-			debugger;
-		}
-		else {
-			// deconstruct phuzzy fields
-			let {
-				row: af_row,
-				predicates: hf_predicates,
-			} = k_phuzzy;
-
-			// move over to completed set
-			as_complete_pairs.add(p_predicate);
-
-			// fetch row decriptor
-			let h_row = this.existing_rows[p_predicate];
-
-			// special handler for this predicate
-			if(p_predicate in hf_predicates) {
-				// apply handler
-				hf_predicates[p_predicate].load(h_row.values, h_row.row);
-			}
-
-			// each row handler
-			af_row.forEach((f_row) => {
-				// apply handler
-				f_row(p_predicate, h_row.values, h_row.row);
-			});
-
-			// // add to hash
-			// k_phuzzy.writer_outgoing.add({
-			// 	[this.loader.resource_terse]: {
-			// 		[k_phuzzy.terse(p_predicate)]: this.triples[p_predicate],
-			// 	},
-			// });
-		}
 	}
 }
-
 
 class ResourceLoader {
 	constructor(p_resource, k_phuzzy, fk_resource) {
@@ -1557,7 +1394,8 @@ class ResourceLoader {
 		// fetch chunk size
 		let n_chunk_size = k_phuzzy.chunk_size;
 
-		// at same time
+		// Run the queries for obtaining outbound predicates and inbound sequentially so that
+    // pre-processing on the incoming triples (eg excluding some) can be done based on outbound predicates
 		async.series([
 			(fk_task) => {
 				k_outgoing.download_triples(`
@@ -1897,7 +1735,7 @@ class Phuzzy {
 
 	constructor(h_config) {
 		Object.assign(this, {
-			chunk_size: 1 << 7,
+			chunk_size: 50,
 		}, h_config, {
 			loader: null,
 		});
@@ -2095,129 +1933,7 @@ class Phuzzy {
 	}
 
 	serialize(pm_format) {
-		return; 
-
-		// // terse resource string
-		// let sct_resource = this.loader.resource_concise;
-
-		// // prep serializer
-		// let g_content = graphy.content(pm_format);
-		// if(!g_content) throw new Error('graphy cannot serialize to '+pm_format);
-
-		// let h_prefixes = this.prefixes || {};
-		// let h_prefixes_used = {};
-
-		// // accumulate outgoing prefixes first
-		// let as_prefixes_used = this.loader.outgoing.prefixes_used;
-		// as_prefixes_used.add(sct_resource.substr(0, sct_resource.indexOf(':')));
-		// for(let s_prefix of as_prefixes_used) {
-		// 	h_prefixes_used[s_prefix] = h_prefixes[s_prefix];
-		// }
-
-		// // outgoing
-		// let b_finished_outgoing = false;
-		// let s_comment_outgoing = `   Outgoing properties for '${sct_resource}'   `;
-
-		// let ds_writer_outgoing = g_content.write({
-		// 	prefixes: h_prefixes_used,
-		// });
-		
-		// // accumulate outgoing
-		// let s_serialized_outgoing = '';
-		// ds_writer_outgoing.pipe(new stream.Writable({
-		// 	write: (s_chunk, s_encdoing, fk_chunk) => {
-		// 		s_serialized_outgoing += s_chunk;
-		// 		fk_chunk();
-		// 	},
-		// })).on('finish', () => {
-		// 	if(b_finished_incoming) {
-		// 		this.machine.edit_rdf(s_serialized_outgoing + s_serialized_incoming, pm_format);
-		// 	}
-		// 	b_finished_outgoing = true;
-		// });
-
-		// let ds_writer_incoming = g_content.write({
-		// 	prefixes: h_prefixes_used,
-		// });
-
-		// ds_writer_outgoing.write({
-		// 	type: 'c3',
-		// 	value: {
-		// 		[factory.comment()]: [s_comment_outgoing_border, '|'+s_comment_outgoing+'|', s_comment_outgoing_border].join('\n'),
-		// 		[factory.newlines()]: 1,
-
-		// 	},
-		// });
-
-
-		// // then make incoming prefixes next
-		// as_prefixes_used = this.loader.incoming.prefixes_used;
-		// as_prefixes_used.add(sct_resource.substr(0, sct_resource.indexOf(':')));
-		// h_prefixes_used = {};
-		// for(let s_prefix of as_prefixes_used) {
-		// 	h_prefixes_used[s_prefix] = h_prefixes[s_prefix];
-		// }
-
-		// // incoming
-		// let b_finished_incoming = false;
-		// let s_comment_incoming = `   Incoming properties for '${sct_resource}'   `;
-		// let s_comment_incoming_border = '+'+'-'.repeat(s_comment_outgoing.length)+'+';
-		// let k_serializer_incoming = this.serializer = dc_serializer({
-		// 	ready() {
-		// 		this.comment([s_comment_incoming_border, '|'+s_comment_incoming+'|', s_comment_incoming_border].join('\n'));
-		// 		this.blank_line();
-		// 	},
-		// 	prefixes: h_prefixes_used,
-		// });
-
-		// // accumulate incoming
-		// let s_serialized_incoming = '\n\n\n';
-		// k_serializer_incoming.pipe(new stream.Writable({
-		// 	write: (s_chunk, s_encdoing, fk_chunk) => {
-		// 		s_serialized_incoming += s_chunk;
-		// 		fk_chunk();
-		// 	},
-		// })).on('finish', () => {
-		// 	if(b_finished_outgoing) {
-		// 		this.machine.edit_rdf(s_serialized_outgoing + s_serialized_incoming, pm_format);
-		// 	}
-		// 	b_finished_incoming = true;
-		// });
-
-
-		// // // no outgoing triples
-		// // if(!this.loader.outgoing.stats.triples) 
-
-		// // set writer
-		// let k_writer_outgoing = k_serializer_outgoing.writer;
-
-
-		// // outgoing triples
-		// let h_outgoing = this.loader.outgoing.triples;
-		// k_writer_outgoing.add({
-		// 	[sct_resource]: h_outgoing,
-		// });
-		// k_serializer_outgoing.close();
-
-
-		// // incoming triples
-		// let k_writer_incoming = k_serializer_incoming.writer;
-
-		// let h_incoming = this.loader.incoming.triples;
-		// for(let sct_predicate in h_incoming) {
-		// 	let a_subjects = h_incoming[sct_predicate];
-		// 	for(let i_subject=0, n_subjects=a_subjects.length; i_subject<n_subjects; i_subject++) {
-		// 		let sct_subject = a_subjects[i_subject];
-		// 		k_writer_incoming.add({
-		// 			[sct_subject]: {
-		// 				[sct_predicate]: sct_resource,
-		// 			},
-		// 		});
-		// 	}
-		// }
-
-		// k_serializer_incoming.close();
-
+		return;
 	}
 
 	// turn a uri into a terse term string
@@ -2282,7 +1998,7 @@ class Phuzzy {
 			document.querySelector('#abstract').removeChild(document.querySelector('#map'));
 		}
 		catch(e_remove) {
-			console.error(e_remove);
+			// Don't issue a warning, because some triples won't have an associated map (it's not an error)
 		}
 
 		// set machine
