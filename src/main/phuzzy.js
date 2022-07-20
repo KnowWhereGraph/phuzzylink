@@ -1398,9 +1398,29 @@ class ResourceLoader {
     // pre-processing on the incoming triples (eg excluding some) can be done based on outbound predicates
 		async.series([
 			(fk_task) => {
+        k_outgoing.download_triples(`
+        select distinct ?predicate ?object (sample(?predicate_label_any) as ?predicate_label) (group_concat(?object_label_each; separator=" / ") as ?object_label) {
+          ${sv1_resource} ?predicate ?object .
+          FILTER(?predicate=rdf:type || ?predicate=geo:hasDefaultGeometry)
+          optional {
+            ?predicate rdfs:label ?predicate_label_any .
+          }
+          optional {
+            ?object rdfs:label ?object_label_each .
+          }
+        }
+        group by ?predicate ?object
+        order by ?predicate ?object
+      `, n_chunk_size, () => {
+        fk_task();
+      });
+			},
+			(fk_task) => {
 				k_outgoing.download_triples(`
 					select distinct ?predicate ?object (sample(?predicate_label_any) as ?predicate_label) (group_concat(?object_label_each; separator=" / ") as ?object_label) {
 						${sv1_resource} ?predicate ?object .
+            FILTER(?predicate != rdf:type)
+            FILTER(?predicate != geo:hasDefaultGeometry)
 						optional {
 							?predicate rdfs:label ?predicate_label_any .
 						}
@@ -1414,7 +1434,6 @@ class ResourceLoader {
 					fk_task();
 				});
 			},
-
 			(fk_task) => {
 				k_incoming.download_triples(`
 					select distinct ?subject ?predicate (group_concat(?subject_label_each; separator=" / ") as ?subject_label) (sample(?predicate_label_any) as ?predicate_label) {
