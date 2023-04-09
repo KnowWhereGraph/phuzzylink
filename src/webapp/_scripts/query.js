@@ -230,6 +230,7 @@ const H_PREFIXES = {
 	cegis: 'http://data.usgs.gov/lod/cegis/ontology/',
 	cegisf: 'http://data.usgs.gov/lod/cegis/feature/',
 	'umbel-rc': 'http://umbel.org/umbel/rc/',
+	'kwglr': 'http://stko-kwg.geog.ucsb.edu/lod/lite-resource/',
 };
 
 const R_SELECTOR = /^(\w*)(.*)$/;

@@ -155,6 +155,7 @@ function extract_resource(s_from, b_initial=false) {
 
 				// prefix not exist
 				if(!h_prefixes[s_prefix]) {
+					console.log(h_prefixes)
 					throw new Error(`no such prefix found in context: ${s_prefix}`);
 				}
 
@@ -431,6 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				// all good
 				d_endpoint.classList.add('okay');
+				console.log("OK")
 				fk_task();
 			});
 		},
@@ -541,6 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// load prefixes
 		(fk_task) => {
+			console.log("Loading prefixes")
 			// prefixes is given by a url to a json-ld file
 			if('string' === typeof z_prefixes) {
 				// // turn path into absolute URI
@@ -696,6 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				k_explorer = phuzzy({
 					prefixes: h_prefixes,
 					endpoint: p_endpoint,
+					lite_endpoint: P_ENDPOINT,
 					plugins: a_init_plugins,
 					settings: h_settings,
 					sort_order: a_sort_order.map((s_rule) => {
@@ -716,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				else {
 					k_explorer.browse('<http://ld.iospress.nl/rdf/organization/Publisher.IOS_Press>');
 				}
-
+				console.log("Done")
 				// done here
 				fk_task();
 			});
@@ -746,4 +750,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			k_explorer.browse(p_resource);
 		}, false);
 	});
+	
 });

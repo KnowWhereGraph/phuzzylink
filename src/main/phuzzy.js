@@ -397,9 +397,12 @@ class ResourceChannel {
 				}
 			}
 		};
-
+		let endpoint = this.phuzzy.endpoint;
+		if (window.location.href.includes("kwgl")) {
+			endpoint = this.phuzzy.lite_endpoint;
+		}
 		// open async http post request to endpoint
-		d_xhr.open('POST', this.phuzzy.endpoint, true);
+		d_xhr.open('POST', endpoint, true);
 
 		// headers
 		d_xhr.setRequestHeader('Accept', S_MIME_SPARQL_RESULTS);
@@ -2027,7 +2030,6 @@ class Phuzzy {
 		// source
 		let d_source = this.space.querySelector('.outgoing .browse-header .source');
 		d_source.classList.remove('ready');
-		d_source.classList.add('loading');
 
 		// instantiate new resource loader
 		this.loader = new ResourceLoader(p_resource, this, () => {
@@ -2037,8 +2039,6 @@ class Phuzzy {
 			});
 
 			// rdf display
-			d_source.classList.remove('loading');
-			d_source.classList.add('ready');
 			$(d_source).unbind()
 				.click(function() {
 					k_machine.toggle();

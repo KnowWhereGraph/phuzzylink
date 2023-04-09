@@ -4,9 +4,17 @@ This is the repository for phuzzylink in KWG .
 ## Deploying
 
 To deploy the service:
-```npm install```
-```npx emk```
-```node src/server/server.js -p 3001```
+`npm install`
+
+`cd ./plugins`
+
+`npm install`
+
+`cd ..`
+
+`npx emk`
+
+`node src/server/server.js -p 3001`
 
 ## Developing
 
