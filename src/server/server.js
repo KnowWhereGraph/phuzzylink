@@ -46,7 +46,6 @@ const P_LITE_ENDPOINT = h_argv.e || h_argv.endpoint || 'https://stko-kwg.geog.uc
 
 const P_DIR_PLUGINS = path.resolve(__dirname, '../..', 'plugins');
 const P_DIR_FETCH = path.resolve(__dirname, '../..', 'fetch');
-const P_DIR_DATA = path.resolve(__dirname, '../..', 'data');
 
 const X_MAX_PAYLOAD_SIZE = 16384;
 
@@ -149,23 +148,9 @@ function resolve_endpoint(s_endpoint, d_res) {
 	return s_endpoint;
 }
 
-
 const k_app = express();
-
-
 const PD_ROOT = path.resolve(__dirname, '../../');
-
-const PD_LIB = path.join(PD_ROOT, 'src');
-const PD_LIB_WEBAPP = path.join(PD_LIB, 'webapp');
-
-// there are no files named as '_resources'
-const PD_RESOURCES = path.join(PD_LIB_WEBAPP, '_resources');
-
-const PD_DIST = path.join(PD_ROOT, 'build');
-const PD_DIST_WEBAPP = path.join(PD_DIST, 'webapp');
-
 const SCHEMA_BASE_DIR = path.join('static', 'schema');
-
 const R_SAFE_PATH = /^[\w-]+$/;
 
 function assert_safe_path(s_file, d_res) {
@@ -173,7 +158,6 @@ function assert_safe_path(s_file, d_res) {
 		d_res.status(400).end(`bad param name: '${s_file}'`);
 	}
 }
-
 
 // middleware body parse
 k_app.use(body_parser.json({
@@ -187,33 +171,19 @@ k_app.use(cors());
 k_app.set('views', path.resolve(__dirname, '../webapp/_layouts'));
 k_app.set('view engine', 'pug');
 
-// styles
-k_app.use('/asset/style', less_middleware(path.join(PD_LIB_WEBAPP, '_styles'), {
-	dest: path.join(PD_DIST_WEBAPP, '_styles'),
-}));
-
-// // scripts
+// scripts
 browserify_middleware.settings.development('minify', true);
 browserify_middleware.settings.development('gzip', true);
-k_app.use('/asset/script', browserify_middleware(__dirname+'/../webapp/_scripts'));
+k_app.use('/static/script', browserify_middleware(__dirname+'/../webapp/_scripts'));
 
 // static routing
-// k_app.use('/script', express.static(__dirname+'/../../build/webapp/_scripts'));
-k_app.use('/asset/style', express.static(__dirname+'/../../build/webapp/_styles'));
-// Updated by Rui
-//k_app.use('/asset/resource', express.static(__dirname+'/../../src/webapp/_resources'));
-k_app.use('/asset/resource', express.static(__dirname+'/../../plugins/node_modules/leaflet/dist'));
-k_app.use('/asset/fonts', express.static(__dirname+'/../../node_modules/font-awesome/fonts'));
-k_app.use('/asset/data', express.static(P_DIR_DATA));
-
-// // static routing from ios press interface
+k_app.use('/static/style', express.static(__dirname+'/../../build/webapp/_styles'));
+k_app.use('/static/resource', express.static(__dirname+'/../../plugins/node_modules/leaflet/dist'));
 k_app.use('/static/css', express.static(path.join(PD_ROOT, 'static/css')));
 k_app.use('/static/js', express.static(path.join(PD_ROOT, 'static/js')));
 k_app.use('/static/images', express.static(path.join(PD_ROOT, 'static/images')));
 k_app.use('/static/schema', express.static(path.join(PD_ROOT, SCHEMA_BASE_DIR)));
-k_app.use('/asset', express.static(path.join(PD_ROOT, 'static/asset')));
 
-//
 k_app.get('/', (d_req, d_res) => {
 	d_res.sendFile(path.join(PD_ROOT, 'static/html/index.html'));
 });
@@ -232,6 +202,7 @@ const D_URL_ENDPOINT = new url.URL(P_ENDPOINT);
 k_app.use('/sparql', proxy({
 	changeOrigin: true,
 	target: D_URL_ENDPOINT.origin,
+  secure: false,
 	pathRewrite: {
 		'^/sparql': D_URL_ENDPOINT.pathname,
 	},
