@@ -398,8 +398,12 @@ class ResourceChannel {
 			}
 		};
 		let endpoint = this.phuzzy.endpoint;
+
 		if (window.location.href.includes("kwgl")) {
 			endpoint = this.phuzzy.lite_endpoint;
+		}
+		if (window.location.href.includes("kwgl") && window.location.href.includes("staging.")) {
+			endpoint = this.phuzzy.lite_endpoint_staging;
 		}
 		// open async http post request to endpoint
 		d_xhr.open('POST', endpoint, true);

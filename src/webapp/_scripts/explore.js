@@ -699,7 +699,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				k_explorer = phuzzy({
 					prefixes: h_prefixes,
 					endpoint: p_endpoint,
-					lite_endpoint: P_ENDPOINT,
+					lite_endpoint: "https://stko-kwg.geog.ucsb.edu/graphdb/repositories/KWG-Lite",
+					lite_endpoint_staging: "https://staging.knowwheregraph.org/graphdb/repositories/KWG-Lite",
 					plugins: a_init_plugins,
 					settings: h_settings,
 					sort_order: a_sort_order.map((s_rule) => {
