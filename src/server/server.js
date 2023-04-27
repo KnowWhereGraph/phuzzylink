@@ -201,7 +201,6 @@ const D_URL_ENDPOINT = new url.URL(P_ENDPOINT);
 // sparql
 k_app.use('/sparql', proxy({
 	target: D_URL_ENDPOINT.origin,
-  secure: false,
 	pathRewrite: {
 		'^/sparql': D_URL_ENDPOINT.pathname,
 	},
