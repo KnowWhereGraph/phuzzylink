@@ -42,7 +42,7 @@ const proxy = require('http-proxy-middleware');
 
 const N_PORT = h_argv.p || h_argv.port || 80;
 const P_ENDPOINT = h_argv.e || h_argv.endpoint || 'https://stko-kwg.geog.ucsb.edu/graphdb/repositories/KWG';
-
+const P_LITE_ENDPOINT = h_argv.e || h_argv.endpoint || 'https://stko-kwg.geog.ucsb.edu/graphdb/repositories/KWG-Lite'
 
 const P_DIR_PLUGINS = path.resolve(__dirname, '../..', 'plugins');
 const P_DIR_FETCH = path.resolve(__dirname, '../..', 'fetch');
@@ -216,26 +216,10 @@ const H_PREFIXES = {
 	dc: 'http://purl.org/dc/elements/1.1/',
 	dcterms: 'http://purl.org/dc/terms/',
 	foaf: 'http://xmlns.com/foaf/0.1/',
-
-
-	//kwgr: 'http://stko-roy.geog.ucsb.edu/lod/resource/',
 	kwgr: 'http://stko-kwg.geog.ucsb.edu/lod/resource/',
 	'kwg-ont':'http://stko-kwg.geog.ucsb.edu/lod/ontology/',
-	//directrelief: 'https://stko-directrelief.geog.ucsb.edu/lod/ontology/' ,
-	//'dr-affiliation': 'https://stko-directrelief.geog.ucsb.edu/lod/affiliation/' ,
-    //'dr-people': 'https://stko-directrelief.geog.ucsb.edu/lod/people/' ,
-	//'dr-expertise': 'https://stko-directrelief.geog.ucsb.edu/lod/expertise/' ,
-	//'dr-place': 'https://stko-directrelief.geog.ucsb.edu/lod/place/' ,
-
-	// iospress: 'http://ld.iospress.nl/rdf/ontology/',
-	// 'iospress-category': 'http://ld.iospress.nl/rdf/category/',
-	// 'iospress-datatype': 'http://ld.iospress.nl/rdf/datatype/',
-	// 'iospress-index': 'http://ld.iospress.nl/rdf/index/',
-	// 'iospress-alias': 'http://ld.iospress.nl/rdf/alias/',
-	// 'iospress-artifact': 'http://ld.iospress.nl/rdf/artifact/',
-	// 'iospress-contributor': 'http://ld.iospress.nl/rdf/contributor/',
-	// 'iospress-organization': 'http://ld.iospress.nl/rdf/organization/',
-	// 'iospress-geocode': 'http://ld.iospress.nl/rdf/geocode/',
+	'kwgl-ont':'http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/',
+	'kwglr': 'http://stko-kwg.geog.ucsb.edu/lod/lite-resource/',
 	geo: 'http://www.opengis.net/ont/geosparql#',
 	ago: 'http://awesemantic-geo.link/ontology/',
 };
@@ -246,8 +230,8 @@ for(let [s_prefix_id, p_prefix_iri] of Object.entries(H_PREFIXES)) {
 }
 
 // submit sparql query via HTTP
-const sparql_query = (s_accept, s_query, fk_query) => {
-	request.post(P_ENDPOINT, {
+const sparql_query = (s_accept, s_query, fk_query, endpoint=P_ENDPOINT) => {
+	request.post(endpoint, {
 		headers: {
 			accept: s_accept,
 			'content-type': 'application/sparql-query;charset=UTF-8',
@@ -296,7 +280,11 @@ const negotiate_feature = (d_req, d_res, f_next) => {
 	let f_redirect = () => {
 		d_res.redirect(p_redirect);
 	};
-
+	// If the subject is coming from the lite repository-switch endpoints
+	let endpoint = P_ENDPOINT
+	if (group.includes("kwgl")) {
+		endpoint = P_LITE_ENDPOINT;
+	}
 	// application/rdf+xml
 	let f_rdf_xml = () => {
 		sparql_query('application/rdf+xml', `describe ${sv1_entity}`, (e_query, d_sparql_res, s_res_body) => {
@@ -311,7 +299,7 @@ const negotiate_feature = (d_req, d_res, f_next) => {
 
 			// otherwise; send body
 			d_res.send(s_res_body);
-		});
+		}, endpoint);
 	};
 
 	// // json-ld
@@ -609,7 +597,8 @@ k_app.get([
 					//'kwg-ont':'http://stko-roy.geog.ucsb.edu/lod/ontology/',
 					kwgr: 'http://stko-kwg.geog.ucsb.edu/lod/resource/',
 					'kwg-ont':'http://stko-kwg.geog.ucsb.edu/lod/ontology/',
-
+					'kwgl-ont':'http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/',
+					'kwglr': 'http://stko-kwg.geog.ucsb.edu/lod/lite-resource/',
 					sosa: 'http://www.w3.org/ns/sosa/',
 					time: 'http://www.w3.org/2006/time#',
 
