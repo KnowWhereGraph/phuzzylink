@@ -201,6 +201,8 @@ const D_URL_ENDPOINT = new url.URL(P_ENDPOINT);
 // sparql
 k_app.use('/sparql', proxy({
 	target: D_URL_ENDPOINT.origin,
+	// Disable checking that the request is sent over HTTPS (NGINX will take care of this)
+	secure: false,
 	pathRewrite: {
 		'^/sparql': D_URL_ENDPOINT.pathname,
 	},
