@@ -10,7 +10,7 @@ npm install
 cd plugins
 npm install
 cd ..
-npx emk -f
+npx emk -f -w
 sh transpile.sh
 ```
 
