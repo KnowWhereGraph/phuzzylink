@@ -444,7 +444,7 @@ k_app.use([
 
 // fetch specific pack
 k_app.get([
-	'/asset/pack/:pack',
+	'/static/pack/:pack',
 ], (d_req, d_res) => {
 	// extract pack
 	let s_pack = d_req.params.pack;
@@ -455,7 +455,7 @@ k_app.get([
 
 // fetch specific pack
 k_app.get([
-	'/asset/context/:context',
+	'/static/context/:context',
 ], (d_req, d_res) => {
 	// extract context
 	let s_context = d_req.params.context;
@@ -472,7 +472,7 @@ k_app.get([
 
 // fetch specific config
 k_app.get([
-	/^\/asset\/config\/(.+)$/,
+	/^\/static\/config\/(.+)$/,
 ], (d_req, d_res) => {
 	// extract source
 	let s_source = resolve_endpoint(d_req.params[0], d_res);
@@ -738,7 +738,7 @@ k_app.get([
 
 // describe plugin
 k_app.get([
-	'/asset/plugin/:plugin',
+	'/static/plugin/:plugin',
 ], (d_req, d_res) => {
 	// fetch plugin name
 	let s_plugin = d_req.params.plugin;
@@ -771,7 +771,7 @@ k_app.get([
 				let p_asset = h_package.main.replace(/^(\/*|(\.+\/)*)*/, '');
 
 				// redirect
-				d_res.redirect(303, `/asset/plugin/${s_plugin}/${p_asset}`);
+				d_res.redirect(303, `/static/plugin/${s_plugin}/${p_asset}`);
 			});
 		},
 	});
@@ -819,7 +819,7 @@ class streamStringWrapper extends stream.Transform {
 
 // describe plugin
 k_app.get([
-	/^\/asset\/plugin\/([\w0-9_-]+)\/([^/].*)/,
+	/^\/static\/plugin\/([\w0-9_-]+)\/([^/].*)/,
 ], (d_req, d_res) => {
 	// fetch plugin name
 	let s_plugin = d_req.params[0];
