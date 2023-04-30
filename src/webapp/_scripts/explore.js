@@ -217,9 +217,6 @@ function fetch_endpoint_config(p_endpoint, fk_download) {
 	request.get({
 		url: '/static/config/'+p_endpoint,
 	}, (e_req, d_res, s_body) => {
-		console.log(e_req)
-		console.log(d_res)
-		console.log(s_body)
 		// request error
 		if(e_req) {
 			fk_download(e_req);
