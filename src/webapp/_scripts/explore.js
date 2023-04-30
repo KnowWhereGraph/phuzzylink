@@ -7,8 +7,8 @@ const phuzzy = require('../../main/phuzzy.js');
 const querystring = require('querystring');
 
 const R_BROWSE_SOURCE = /^\/browse\/(.+)$/;
-const P_DEFAULT_PREFIXES = `${window.location.origin}/asset/context/default`;
-const P_DEFAULT_PLUGIN_PACK = `${window.location.origin}/asset/pack/iospress`;
+const P_DEFAULT_PREFIXES = `${window.location.origin}/static/context/default`;
+const P_DEFAULT_PLUGIN_PACK = `${window.location.origin}/static/pack/iospress`;
 const R_PREFIXED_NAME = /^([^:]+:.*|:.+)$/;
 const R_IRI = /^<(.+)>$/;
 const R_UNENCLOSED_IRI = /^\w+:\/\//;
@@ -215,8 +215,11 @@ function download_sources(fk_download) {
 function fetch_endpoint_config(p_endpoint, fk_download) {
 	// wait for download
 	request.get({
-		url: '/asset/config/'+p_endpoint,
+		url: '/static/config/'+p_endpoint,
 	}, (e_req, d_res, s_body) => {
+		console.log(e_req)
+		console.log(d_res)
+		console.log(s_body)
 		// request error
 		if(e_req) {
 			fk_download(e_req);
@@ -599,7 +602,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					// load package
 					(fk_task_package) => {
 						request.get({
-							url: `/asset/plugin/${s_name}`,
+							url: `/static/plugin/${s_name}`,
 							headers: {
 								accept: 'application/json',
 							},
@@ -641,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
 									id: 'stylesheet_'+s_name,
 									rel: 'stylesheet',
 									type: 'text/css',
-									href: `/asset/plugin/${s_name}/${p_css}`,
+									href: `/static/plugin/${s_name}/${p_css}`,
 								}));
 							});
 						}
@@ -652,7 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				], () => {
 					// download script
 					request.get({
-						url: `/asset/plugin/${s_name}/`,
+						url: `/static/plugin/${s_name}/`,
 						headers: {
 							accept: 'text/javascript',
 						},
