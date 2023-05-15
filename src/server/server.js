@@ -284,7 +284,7 @@ const negotiate_feature = (d_req, d_res, f_next) => {
 	};
 	// If the subject is coming from the lite repository-switch endpoints
 	let endpoint = P_ENDPOINT
-	if (group.includes("kwgl")) {
+	if (s_group.includes("kwgl")) {
 		endpoint = P_LITE_ENDPOINT;
 	}
 	// application/rdf+xml
