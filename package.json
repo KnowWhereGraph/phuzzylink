@@ -6,7 +6,12 @@
     "name": "Blake Regalia",
     "email": "blake.regalia@gmail.com"
   },
-  "contributors": ["Bryce Mecum <mecum@nceas.ucsb.edu>", "Thomas Thelen <thelen@nceas.ucsb.edu>", "Austin Truchan <truchan@msu.edu>", "Rui Zhu <ruizhu@ucsb.edu>"],
+  "contributors": [
+    "Bryce Mecum <mecum@nceas.ucsb.edu>",
+    "Thomas Thelen <thelen@nceas.ucsb.edu>",
+    "Austin Truchan <truchan@msu.edu>",
+    "Rui Zhu <ruizhu@ucsb.edu>"
+  ],
   "files": [
     "dist"
   ],
@@ -23,7 +28,7 @@
   "devDependencies": {
     "@graphy/core.data.factory": "^3.2.2",
     "browserify": "^16.2.3",
-    "less": "^3.9.0",
+    "less": "^3.13.1",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6"
   },
@@ -53,8 +58,8 @@
     "stream-to-array": "^2.3.0",
     "uglify": "^0.1.5",
     "uglifyify": "^4.0.5",
+    "webtorrent": "^1.5.8",
     "wellknown": "^0.5.0",
-    "worker": "^0.3.12",
-    "webtorrent": "^1.5.8"
+    "worker": "^0.3.12"
   }
 }

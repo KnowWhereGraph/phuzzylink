@@ -3,14 +3,17 @@ This is the repository for phuzzylink in KWG .
 
 ## Deploying
 
-Before starting the server, first install the dependencies and run the npx build tool.
+Before starting the server, first install the dependencies and run the npx build tool. The CSS files are generated with `transpile.sh`. You _may_ need to install less with
+
+`npm install less -g`
 
 ```
 npm install
 cd plugins
 npm install
 cd ..
-npx emk
+npx emk -f -w
+sh transpile.sh
 ```
 
 ### Production and Development
