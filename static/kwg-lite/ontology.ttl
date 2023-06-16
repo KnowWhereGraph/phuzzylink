@@ -1,0 +1,1461 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> rdf:type owl:Ontology ;
+                                                    <http://purl.org/dc/terms/contributor> """Krysztof Janowicz,
+Pascal Hitzler,
+Mark Schildhauer,
+Dean Rehnberger,
+Shirly Stephen,
+Cogan Shimizu,
+Colby Fisher,
+Antrea Christou,
+Adrita Barua,
+Sanaz Saki Norouzi,
+Kitty Currier
+Abhilekha Dalal,
+Mohammad Saeid Mahdavinejad,
+Thomas Thelen,
+Anthony D'Onofrio"""@en ;
+                                                    <http://purl.org/dc/terms/created> "2023-06-14"@en ;
+                                                    <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project" ;
+                                                    <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph Panels application"@en ;
+                                                    rdfs:label "KWG-Lite Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasHazardType
+:hasHazardType rdf:type owl:ObjectProperty ;
+               rdfs:label "has hazard type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted
+:hasImpacted rdf:type owl:ObjectProperty ;
+             owl:inverseOf :impactedBy ;
+             rdfs:label "has impacted" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPlaceType
+:hasPlaceType rdf:type owl:ObjectProperty ;
+              rdfs:label "has place type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy
+:impactedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "impacted by" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/isOfFireType
+:isOfFireType rdf:type owl:ObjectProperty ;
+              rdfs:label "is of fire type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains
+:sfContains rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :spatialRelation ;
+            rdfs:label "contains" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects
+:sfIntersects rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :spatialRelation ;
+              rdfs:label "intersects" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps
+:sfOverlaps rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :spatialRelation ;
+            rdfs:label "overlaps" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches
+:sfTouches rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :spatialRelation ;
+           rdfs:label "touches" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin
+:sfWithin rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :spatialRelation ;
+          rdfs:label "within" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation
+:spatialRelation rdf:type owl:ObjectProperty ;
+                 rdfs:label "spatial relation" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/affectedAreaInAcres
+:affectedAreaInAcres rdf:type owl:DatatypeProperty ;
+                     rdfs:label "affected area in acres" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth
+:averageCoolingDegreeDaysPerMonth rdf:type owl:DatatypeProperty ;
+                                  rdfs:label "average cooling degree days per month" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021
+:averageCoolingDegreeDaysPerMonthApr2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021
+:averageCoolingDegreeDaysPerMonthAug2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021
+:averageCoolingDegreeDaysPerMonthDec2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021
+:averageCoolingDegreeDaysPerMonthFeb2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021
+:averageCoolingDegreeDaysPerMonthJan2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021
+:averageCoolingDegreeDaysPerMonthJul2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021
+:averageCoolingDegreeDaysPerMonthJun2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021
+:averageCoolingDegreeDaysPerMonthMar2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021
+:averageCoolingDegreeDaysPerMonthMay2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021
+:averageCoolingDegreeDaysPerMonthNov2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021
+:averageCoolingDegreeDaysPerMonthOct2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021
+:averageCoolingDegreeDaysPerMonthSep2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageCoolingDegreeDaysPerMonth ;
+                                         rdfs:label "average cooling degree days per month-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth
+:averageHeatingDegreeDaysPerMonth rdf:type owl:DatatypeProperty ;
+                                  rdfs:label "average heating degree days per month" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021
+:averageHeatingDegreeDaysPerMonthApr2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021
+:averageHeatingDegreeDaysPerMonthAug2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021
+:averageHeatingDegreeDaysPerMonthDec2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021
+:averageHeatingDegreeDaysPerMonthFeb2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021
+:averageHeatingDegreeDaysPerMonthJan2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021
+:averageHeatingDegreeDaysPerMonthJul2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021
+:averageHeatingDegreeDaysPerMonthJun2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021
+:averageHeatingDegreeDaysPerMonthMar2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021
+:averageHeatingDegreeDaysPerMonthMay2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021
+:averageHeatingDegreeDaysPerMonthNov2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021
+:averageHeatingDegreeDaysPerMonthOct2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021
+:averageHeatingDegreeDaysPerMonthSep2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf :averageHeatingDegreeDaysPerMonth ;
+                                         rdfs:label "average heating degree days per month-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius
+:averageMonthlyTemperatureInCelsius rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "average monthly temperature in celsius" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021
+:averageMonthlyTemperatureInCelsiusApr2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021
+:averageMonthlyTemperatureInCelsiusAug2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021
+:averageMonthlyTemperatureInCelsiusDec2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021
+:averageMonthlyTemperatureInCelsiusFeb2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021
+:averageMonthlyTemperatureInCelsiusJan2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021
+:averageMonthlyTemperatureInCelsiusJul2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021
+:averageMonthlyTemperatureInCelsiusJun2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021
+:averageMonthlyTemperatureInCelsiusMar2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021
+:averageMonthlyTemperatureInCelsiusMay2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021
+:averageMonthlyTemperatureInCelsiusNov2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021
+:averageMonthlyTemperatureInCelsiusOct2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021
+:averageMonthlyTemperatureInCelsiusSep2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :averageMonthlyTemperatureInCelsius ;
+                                           rdfs:label "average monthly temperature in celsius-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToCropsInDollars
+:damageToCropsInDollars rdf:type owl:DatatypeProperty ;
+                        rdfs:label "damage to crop in dollars" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToInfrastructureInDollars
+:damageToInfrastructureInDollars rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "damage to infrstructure in dollars" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace
+:dollarDamageOfFiresImpactingPlace rdf:type owl:DatatypeProperty ;
+                                   rdfs:label "dollar damage of fires impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018
+:dollarDamageOfFiresImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :dollarDamageOfFiresImpactingPlace ;
+                                       rdfs:label "dollar damage of fires impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019
+:dollarDamageOfFiresImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :dollarDamageOfFiresImpactingPlace ;
+                                       rdfs:label "dollar damage of fires impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020
+:dollarDamageOfFiresImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :dollarDamageOfFiresImpactingPlace ;
+                                       rdfs:label "dollar damage of fires impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021
+:dollarDamageOfFiresImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :dollarDamageOfFiresImpactingPlace ;
+                                       rdfs:label "dollar damage of fires impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022
+:dollarDamageOfFiresImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :dollarDamageOfFiresImpactingPlace ;
+                                       rdfs:label "dollar damage of fires impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace
+:dollarDamageOfFloodsImpactingPlace rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "dollar damage of floods impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018
+:dollarDamageOfFloodsImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf :dollarDamageOfFloodsImpactingPlace ;
+                                        rdfs:label "dollar damage of floods impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019
+:dollarDamageOfFloodsImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf :dollarDamageOfFloodsImpactingPlace ;
+                                        rdfs:label "dollar damage of floods impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020
+:dollarDamageOfFloodsImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf :dollarDamageOfFloodsImpactingPlace ;
+                                        rdfs:label "dollar damage of floods impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021
+:dollarDamageOfFloodsImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf :dollarDamageOfFloodsImpactingPlace ;
+                                        rdfs:label "dollar damage of floods impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022
+:dollarDamageOfFloodsImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf :dollarDamageOfFloodsImpactingPlace ;
+                                        rdfs:label "dollar damage of floods impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace
+:dollarDamageOfHurricanesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                        rdfs:label "dollar damage of hurricanes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018
+:dollarDamageOfHurricanesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfHurricanesImpactingPlace ;
+                                            rdfs:label "dollar damage of hurricanes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019
+:dollarDamageOfHurricanesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfHurricanesImpactingPlace ;
+                                            rdfs:label "dollar damage of hurricanes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020
+:dollarDamageOfHurricanesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfHurricanesImpactingPlace ;
+                                            rdfs:label "dollar damage of hurricanes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021
+:dollarDamageOfHurricanesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfHurricanesImpactingPlace ;
+                                            rdfs:label "dollar damage of hurricanes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022
+:dollarDamageOfHurricanesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfHurricanesImpactingPlace ;
+                                            rdfs:label "dollar damage of hurricanes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace
+:dollarDamageOfLandslidesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                        rdfs:label "dollar damage of landslides impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018
+:dollarDamageOfLandslidesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfLandslidesImpactingPlace ;
+                                            rdfs:label "dollar damage of landslides impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019
+:dollarDamageOfLandslidesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfLandslidesImpactingPlace ;
+                                            rdfs:label "dollar damage of landslides impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020
+:dollarDamageOfLandslidesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfLandslidesImpactingPlace ;
+                                            rdfs:label "dollar damage of landslides impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021
+:dollarDamageOfLandslidesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfLandslidesImpactingPlace ;
+                                            rdfs:label "dollar damage of landslides impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022
+:dollarDamageOfLandslidesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf :dollarDamageOfLandslidesImpactingPlace ;
+                                            rdfs:label "dollar damage of landslides impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace
+:dollarDamageOfStormSurgesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                         rdfs:label "dollar damage of storm surges impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018
+:dollarDamageOfStormSurgesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf :dollarDamageOfStormSurgesImpactingPlace ;
+                                             rdfs:label "dollar damage of storm surges impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019
+:dollarDamageOfStormSurgesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf :dollarDamageOfStormSurgesImpactingPlace ;
+                                             rdfs:label "dollar damage of storm surges impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020
+:dollarDamageOfStormSurgesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf :dollarDamageOfStormSurgesImpactingPlace ;
+                                             rdfs:label "dollar damage of storm surges impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021
+:dollarDamageOfStormSurgesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf :dollarDamageOfStormSurgesImpactingPlace ;
+                                             rdfs:label "dollar damage of storm surges impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022
+:dollarDamageOfStormSurgesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf :dollarDamageOfStormSurgesImpactingPlace ;
+                                             rdfs:label "dollar damage of storm surges impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace
+:dollarDamageOfTornadoesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                       rdfs:label "dollar damage of tornadoes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018
+:dollarDamageOfTornadoesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :dollarDamageOfTornadoesImpactingPlace ;
+                                           rdfs:label "dollar damage of tornadoes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019
+:dollarDamageOfTornadoesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :dollarDamageOfTornadoesImpactingPlace ;
+                                           rdfs:label "dollar damage of tornadoes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020
+:dollarDamageOfTornadoesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :dollarDamageOfTornadoesImpactingPlace ;
+                                           rdfs:label "dollar damage of tornadoes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021
+:dollarDamageOfTornadoesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :dollarDamageOfTornadoesImpactingPlace ;
+                                           rdfs:label "dollar damage of tornadoes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022
+:dollarDamageOfTornadoesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :dollarDamageOfTornadoesImpactingPlace ;
+                                           rdfs:label "dollar damage of tornadoes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasEndDate
+:hasEndDate rdf:type owl:DatatypeProperty ;
+            rdfs:label "has end date" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasKWGEntity
+:hasKWGEntity rdf:type owl:DatatypeProperty ;
+              rdfs:label "has KWG entity" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:label "has name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasNumberOfHouseHolds
+:hasNumberOfHouseHolds rdf:type owl:DatatypeProperty ;
+                       rdfs:label "has number of household units" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPopulation
+:hasPopulation rdf:type owl:DatatypeProperty ;
+               rdfs:label "has population" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasStartDate
+:hasStartDate rdf:type owl:DatatypeProperty ;
+              rdfs:label "has start date" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius
+:maximumMonthlyTemperatureInCelsius rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "maximum monthly temperature in celsius" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021
+:maximumMonthlyTemperatureInCelsiusApr2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021
+:maximumMonthlyTemperatureInCelsiusAug2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021
+:maximumMonthlyTemperatureInCelsiusDec2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021
+:maximumMonthlyTemperatureInCelsiusFeb2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021
+:maximumMonthlyTemperatureInCelsiusJan2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021
+:maximumMonthlyTemperatureInCelsiusJul2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021
+:maximumMonthlyTemperatureInCelsiusJun2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021
+:maximumMonthlyTemperatureInCelsiusMar2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021
+:maximumMonthlyTemperatureInCelsiusMay2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021
+:maximumMonthlyTemperatureInCelsiusNov2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021
+:maximumMonthlyTemperatureInCelsiusOct2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021
+:maximumMonthlyTemperatureInCelsiusSep2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :maximumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "maximum monthly temperature in celsius-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius
+:minimumMonthlyTemperatureInCelsius rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "minimum monthly temperature in celsius" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021
+:minimumMonthlyTemperatureInCelsiusApr2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021
+:minimumMonthlyTemperatureInCelsiusAug2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021
+:minimumMonthlyTemperatureInCelsiusDec2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021
+:minimumMonthlyTemperatureInCelsiusFeb2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021
+:minimumMonthlyTemperatureInCelsiusJan2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021
+:minimumMonthlyTemperatureInCelsiusJul2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021
+:minimumMonthlyTemperatureInCelsiusJun2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021
+:minimumMonthlyTemperatureInCelsiusMar2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021
+:minimumMonthlyTemperatureInCelsiusMay2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021
+:minimumMonthlyTemperatureInCelsiusNov2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021
+:minimumMonthlyTemperatureInCelsiusOct2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021
+:minimumMonthlyTemperatureInCelsiusSep2021 rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf :minimumMonthlyTemperatureInCelsius ;
+                                           rdfs:label "minimum monthly temperature in celsius-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfDeaths
+:numberOfDeaths rdf:type owl:DatatypeProperty ;
+                rdfs:label "number of deaths" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace
+:numberOfEarthquakesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                   rdfs:label "number of earthquakes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018
+:numberOfEarthquakesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfEarthquakesImpactingPlace ;
+                                       rdfs:label "number of earthquakes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019
+:numberOfEarthquakesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfEarthquakesImpactingPlace ;
+                                       rdfs:label "number of earthquakes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020
+:numberOfEarthquakesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfEarthquakesImpactingPlace ;
+                                       rdfs:label "number of earthquakes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021
+:numberOfEarthquakesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfEarthquakesImpactingPlace ;
+                                       rdfs:label "number of earthquakes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022
+:numberOfEarthquakesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfEarthquakesImpactingPlace ;
+                                       rdfs:label "number of earthquakes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace
+:numberOfFiresImpactingPlace rdf:type owl:DatatypeProperty ;
+                             rdfs:label "number of fires impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018
+:numberOfFiresImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :numberOfFiresImpactingPlace ;
+                                 rdfs:label "number of fires impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019
+:numberOfFiresImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :numberOfFiresImpactingPlace ;
+                                 rdfs:label "number of fires impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020
+:numberOfFiresImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :numberOfFiresImpactingPlace ;
+                                 rdfs:label "number of fires impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021
+:numberOfFiresImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :numberOfFiresImpactingPlace ;
+                                 rdfs:label "number of fires impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022
+:numberOfFiresImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :numberOfFiresImpactingPlace ;
+                                 rdfs:label "number of fires impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace
+:numberOfFloodsImpactingPlace rdf:type owl:DatatypeProperty ;
+                              rdfs:label "number of floods impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018
+:numberOfFloodsImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf :numberOfFloodsImpactingPlace ;
+                                  rdfs:label "number of floods impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019
+:numberOfFloodsImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf :numberOfFloodsImpactingPlace ;
+                                  rdfs:label "number of floods impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020
+:numberOfFloodsImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf :numberOfFloodsImpactingPlace ;
+                                  rdfs:label "number of floods impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021
+:numberOfFloodsImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf :numberOfFloodsImpactingPlace ;
+                                  rdfs:label "number of floods impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022
+:numberOfFloodsImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf :numberOfFloodsImpactingPlace ;
+                                  rdfs:label "number of floods impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace
+:numberOfHurricanesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                  rdfs:label "number of hurricanes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018
+:numberOfHurricanesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfHurricanesImpactingPlace ;
+                                      rdfs:label "number of hurricanes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019
+:numberOfHurricanesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfHurricanesImpactingPlace ;
+                                      rdfs:label "number of hurricanes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020
+:numberOfHurricanesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfHurricanesImpactingPlace ;
+                                      rdfs:label "number of hurricanes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021
+:numberOfHurricanesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfHurricanesImpactingPlace ;
+                                      rdfs:label "number of hurricanes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022
+:numberOfHurricanesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfHurricanesImpactingPlace ;
+                                      rdfs:label "number of hurricanes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace
+:numberOfLandslidesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                  rdfs:label "number of landslides impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018
+:numberOfLandslidesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfLandslidesImpactingPlace ;
+                                      rdfs:label "number of landslides impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019
+:numberOfLandslidesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfLandslidesImpactingPlace ;
+                                      rdfs:label "number of landslides impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020
+:numberOfLandslidesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfLandslidesImpactingPlace ;
+                                      rdfs:label "number of landslides impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021
+:numberOfLandslidesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfLandslidesImpactingPlace ;
+                                      rdfs:label "number of landslides impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022
+:numberOfLandslidesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfLandslidesImpactingPlace ;
+                                      rdfs:label "number of landslides impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace
+:numberOfStormSurgesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                   rdfs:label "number of storm surges impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018
+:numberOfStormSurgesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfStormSurgesImpactingPlace ;
+                                       rdfs:label "number of storm surges impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019
+:numberOfStormSurgesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfStormSurgesImpactingPlace ;
+                                       rdfs:label "number of storm surges impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020
+:numberOfStormSurgesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfStormSurgesImpactingPlace ;
+                                       rdfs:label "number of storm surges impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021
+:numberOfStormSurgesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfStormSurgesImpactingPlace ;
+                                       rdfs:label "number of storm surges impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022
+:numberOfStormSurgesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf :numberOfStormSurgesImpactingPlace ;
+                                       rdfs:label "number of storm surges impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace
+:numberOfTornadoesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "number of tornadoes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018
+:numberOfTornadoesImpactingPlace-2018 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :numberOfTornadoesImpactingPlace ;
+                                      rdfs:label "number of tornadoes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019
+:numberOfTornadoesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf :numberOfTornadoesImpactingPlace ;
+                                     rdfs:label "number of tornadoes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020
+:numberOfTornadoesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf :numberOfTornadoesImpactingPlace ;
+                                     rdfs:label "number of tornadoes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021
+:numberOfTornadoesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf :numberOfTornadoesImpactingPlace ;
+                                     rdfs:label "number of tornadoes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022
+:numberOfTornadoesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf :numberOfTornadoesImpactingPlace ;
+                                     rdfs:label "number of tornadoes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentBelowPovertyLine
+:percentBelowPovertyLine rdf:type owl:DatatypeProperty ;
+                         rdfs:label "percent below poverty line" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentDiabetic
+:percentDiabetic rdf:type owl:DatatypeProperty ;
+                 rdfs:label "percent diabetic" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentObese
+:percentObese rdf:type owl:DatatypeProperty ;
+              rdfs:label "percent obese" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake
+:Earthquake rdf:type owl:Class ;
+            rdfs:subClassOf :HazardEvent ;
+            rdfs:label "Earthquake" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire
+:Fire rdf:type owl:Class ;
+      rdfs:subClassOf :HazardEvent ;
+      rdfs:label "Fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType
+:FireType rdf:type owl:Class ;
+          rdfs:label "Fire Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent
+:HazardEvent rdf:type owl:Class ;
+             rdfs:label "Hazard Event" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType
+:HazardType rdf:type owl:Class ;
+            rdfs:label "Hazard Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane
+:Hurricane rdf:type owl:Class ;
+           rdfs:subClassOf :HazardEvent ;
+           rdfs:label "Hurricane" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Place
+:Place rdf:type owl:Class ;
+       rdfs:label "Place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType
+:PlaceType rdf:type owl:Class ;
+           rdfs:label "Place Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado
+:Tornado rdf:type owl:Class ;
+         rdfs:subClassOf :HazardEvent ;
+         rdfs:label "Tornado" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-0" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-1" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-2" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-3" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-4" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-5" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6> rdf:type owl:NamedIndividual ,
+                                                                                  :PlaceType ;
+                                                                         rdfs:label "administrative region level-6" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict> rdf:type owl:NamedIndividual ,
+                                                                                   :PlaceType ;
+                                                                          rdfs:label "federal judicial district" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire> rdf:type owl:NamedIndividual ,
+                                                                           :FireType ;
+                                                                  rdfs:label "mtbs complex fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire> rdf:type owl:NamedIndividual ,
+                                                                                     :FireType ;
+                                                                            rdfs:label "mtbs out of area response fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire> rdf:type owl:NamedIndividual ,
+                                                                           :FireType ;
+                                                                  rdfs:label "mtbs unknown fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire> rdf:type owl:NamedIndividual ,
+                                                                        :FireType ;
+                                                               rdfs:label "mtbs wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse> rdf:type owl:NamedIndividual ,
+                                                                               :FireType ;
+                                                                      rdfs:label "mtbs wildland fire use" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire> rdf:type owl:NamedIndividual ,
+                                                                                   :FireType ;
+                                                                          rdfs:label "nifc incident complex fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire> rdf:type owl:NamedIndividual ,
+                                                                              :FireType ;
+                                                                     rdfs:label "nifc prescribed fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire> rdf:type owl:NamedIndividual ,
+                                                                        :FireType ;
+                                                               rdfs:label "nifc wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire> rdf:type owl:NamedIndividual ,
+                                                                        :FireType ;
+                                                               rdfs:label "noaa wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone> rdf:type owl:NamedIndividual ,
+                                                                  :PlaceType ;
+                                                         rdfs:label "national weather zone" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA> rdf:type owl:NamedIndividual ,
+                                                                       :PlaceType ;
+                                                              rdfs:label "US census unit" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision> rdf:type owl:NamedIndividual ,
+                                                                             :PlaceType ;
+                                                                    rdfs:label "US climate division" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea> rdf:type owl:NamedIndividual ,
+                                                                       :PlaceType ;
+                                                              rdfs:label "zip code area" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide> rdf:type owl:NamedIndividual ,
+                                                                               :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard> rdf:type owl:NamedIndividual ,
+                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood> rdf:type owl:NamedIndividual ,
+                                                                        :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill> rdf:type owl:NamedIndividual ,
+                                                                         :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog> rdf:type owl:NamedIndividual ,
+                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought> rdf:type owl:NamedIndividual ,
+                                                                   :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat> rdf:type owl:NamedIndividual ,
+                                                                         :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill> rdf:type owl:NamedIndividual ,
+                                                                                :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire> rdf:type owl:NamedIndividual ,
+                                                                :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood> rdf:type owl:NamedIndividual ,
+                                                                 :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog> rdf:type owl:NamedIndividual ,
+                                                                       :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze> rdf:type owl:NamedIndividual ,
+                                                                       :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud> rdf:type owl:NamedIndividual ,
+                                                                       :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail> rdf:type owl:NamedIndividual ,
+                                                                :HazardType ;
+                                                       rdfs:comment "hail" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat> rdf:type owl:NamedIndividual ,
+                                                                :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType ;
+                                                            rdfs:comment "heavy snow" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf> rdf:type owl:NamedIndividual ,
+                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind> rdf:type owl:NamedIndividual ,
+                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm> rdf:type owl:NamedIndividual ,
+                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow> rdf:type owl:NamedIndividual ,
+                                                                           :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood> rdf:type owl:NamedIndividual ,
+                                                                          :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning> rdf:type owl:NamedIndividual ,
+                                                                     :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind> rdf:type owl:NamedIndividual ,
+                                                                          :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind> rdf:type owl:NamedIndividual ,
+                                                                            :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind> rdf:type owl:NamedIndividual ,
+                                                                                  :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression> rdf:type owl:NamedIndividual ,
+                                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm> rdf:type owl:NamedIndividual ,
+                                                                               :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet> rdf:type owl:NamedIndividual ,
+                                                                 :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave> rdf:type owl:NamedIndividual ,
+                                                                       :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide> rdf:type owl:NamedIndividual ,
+                                                                          :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind> rdf:type owl:NamedIndividual ,
+                                                                            :HazardType ;
+                                                                   rdfs:comment "thunderstorm wind" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado> rdf:type owl:NamedIndividual ,
+                                                                   :HazardType ;
+                                                          rdfs:comment "tornado" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression> rdf:type owl:NamedIndividual ,
+                                                                              :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm> rdf:type owl:NamedIndividual ,
+                                                                         :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout> rdf:type owl:NamedIndividual ,
+                                                                      :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire> rdf:type owl:NamedIndividual ,
+                                                                    :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm> rdf:type owl:NamedIndividual ,
+                                                                       :HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather> rdf:type owl:NamedIndividual ,
+                                                                         :HazardType .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

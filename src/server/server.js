@@ -151,6 +151,7 @@ function resolve_endpoint(s_endpoint, d_res) {
 const k_app = express();
 const PD_ROOT = path.resolve(__dirname, '../../');
 const SCHEMA_BASE_DIR = path.join('static', 'schema');
+const SCHEMA_LITE_BASE_DIR = path.join('static', 'kwg-lite');
 const R_SAFE_PATH = /^[\w-]+$/;
 
 function assert_safe_path(s_file, d_res) {
@@ -183,6 +184,8 @@ k_app.use('/static/css', express.static(path.join(PD_ROOT, 'static/css')));
 k_app.use('/static/js', express.static(path.join(PD_ROOT, 'static/js')));
 k_app.use('/static/images', express.static(path.join(PD_ROOT, 'static/images')));
 k_app.use('/static/schema', express.static(path.join(PD_ROOT, SCHEMA_BASE_DIR)));
+k_app.use('/static/schema-lite', express.static(path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR)));
+
 
 k_app.get('/', (d_req, d_res) => {
 	d_res.sendFile(path.join(PD_ROOT, 'static/html/index.html'));
@@ -435,6 +438,68 @@ const serve_ontology_file = (d_req, d_res, f_next) => {
 	d_res.sendFile(file_path);
 }
 
+
+// handler for /lod/ontology, with content negotation
+const serve_lite_ontology_site = (d_req, d_res, f_next) => {
+	d_req.negotiate({
+		'text/html': () => {
+			d_res.type("text/html");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR, 'index.html'));
+		},
+		'application/rdf+xml': () => {
+			d_res.type("application/rdf+xml");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR, 'ontology.rdf'));
+		},
+		'text/turtle': () => {
+			d_res.type("text/turtle");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR, 'ontology.ttl'));
+		},
+		'application/ld+json': () => {
+			d_res.type("application/ld+json");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR, 'ontology.jsonld'));
+		},
+		'text/ntriples': () => {
+			d_res.type("text/ntriples");
+			d_res.statusCode = 200;
+			d_res.sendFile(path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR, 'ontology.nt'));
+		}
+	});
+}
+
+// handler for /lod/ontology with extension
+const serve_lite_ontology_file = (d_req, d_res, f_next) => {
+	const extension = d_req.params.ext;
+	const file_path = path.join(PD_ROOT, SCHEMA_LITE_BASE_DIR, 'ontology' + extension)
+
+	if (!fs.existsSync(file_path)) {
+		d_res.statusCode = 404;
+		d_res.send("Not Found")
+
+		return;
+	}
+
+	var content_type;
+
+	if (extension == ".ttl") {
+		content_type = "text/turtle";
+	} if (extension == ".nt") {
+		content_type = "text/ntriples";
+	} if (extension == ".rdf") {
+		content_type = "application/rdf+xml";
+	} if (extension == ".jsonld") {
+		content_type = "application/ld+json";
+	}
+
+	d_res.type(content_type);
+	d_res.statusCode = 200;
+	d_res.sendFile(file_path);
+}
+
+
 // requests for /lod/ontology
 k_app.use([
 	'/lod/ontology',
@@ -443,6 +508,17 @@ k_app.use([
 k_app.use([
 	'/lod/ontology:ext',
 ], serve_ontology_file);
+
+
+// requests for /lod/ontology
+k_app.use([
+	'/lod/lite-ontology',
+], serve_lite_ontology_site);
+
+k_app.use([
+	'/lod/lite-ontology:ext',
+], serve_lite_ontology_file);
+
 
 // fetch specific pack
 k_app.get([
