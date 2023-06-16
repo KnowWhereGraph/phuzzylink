@@ -1,0 +1,1212 @@
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> <http://purl.org/dc/terms/contributor> "Krysztof Janowicz,\nPascal Hitzler,\nMark Schildhauer,\nDean Rehnberger,\nShirly Stephen,\nCogan Shimizu,\nColby Fisher,\nAntrea Christou,\nAdrita Barua,\nSanaz Saki Norouzi,\nKitty Currier\nAbhilekha Dalal,\nMohammad Saeid Mahdavinejad,\nThomas Thelen,\nAnthony D'Onofrio"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> <http://purl.org/dc/terms/created> "2023-06-14"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> <http://purl.org/dc/terms/creator> "The KnowWhereGraph Project" .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> <http://purl.org/dc/terms/description> "This ontology supports the KnowWhereGraph Panels application"@en .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> <http://www.w3.org/2000/01/rdf-schema#label> "KWG-Lite Ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasHazardType
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasHazardType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasHazardType> <http://www.w3.org/2000/01/rdf-schema#label> "has hazard type" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted> <http://www.w3.org/2002/07/owl#inverseOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted> <http://www.w3.org/2000/01/rdf-schema#label> "has impacted" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPlaceType
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPlaceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPlaceType> <http://www.w3.org/2000/01/rdf-schema#label> "has place type" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy> <http://www.w3.org/2000/01/rdf-schema#label> "impacted by" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/isOfFireType
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/isOfFireType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/isOfFireType> <http://www.w3.org/2000/01/rdf-schema#label> "is of fire type" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects> <http://www.w3.org/2000/01/rdf-schema#label> "intersects" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#label> "overlaps" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches> <http://www.w3.org/2000/01/rdf-schema#label> "touches" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin> <http://www.w3.org/2000/01/rdf-schema#label> "within" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation> <http://www.w3.org/2000/01/rdf-schema#label> "spatial relation" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/affectedAreaInAcres
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/affectedAreaInAcres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/affectedAreaInAcres> <http://www.w3.org/2000/01/rdf-schema#label> "affected area in acres" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Apr2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Aug2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Dec2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Feb2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Jan2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Jul2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Jun2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Mar2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-May2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Nov2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Oct2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021> <http://www.w3.org/2000/01/rdf-schema#label> "average cooling degree days per month-Sep2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Apr2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Aug2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Dec2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Feb2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Jan2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Jul2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Jun2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Mar2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-May2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Nov2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Oct2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021> <http://www.w3.org/2000/01/rdf-schema#label> "average heating degree days per month-Sep2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Apr2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Aug2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Dec2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Feb2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Jan2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Jul2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Jun2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Mar2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-May2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Nov2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Oct2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/2000/01/rdf-schema#label> "average monthly temperature in celsius-Sep2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToCropsInDollars
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToCropsInDollars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToCropsInDollars> <http://www.w3.org/2000/01/rdf-schema#label> "damage to crop in dollars" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToInfrastructureInDollars
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToInfrastructureInDollars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToInfrastructureInDollars> <http://www.w3.org/2000/01/rdf-schema#label> "damage to infrstructure in dollars" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of fires impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of fires impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of fires impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of fires impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of fires impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of fires impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of floods impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of floods impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of floods impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of floods impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of floods impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of floods impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of hurricanes impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of hurricanes impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of hurricanes impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of hurricanes impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of hurricanes impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of hurricanes impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of landslides impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of landslides impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of landslides impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of landslides impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of landslides impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of landslides impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of storm surges impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of storm surges impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of storm surges impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of storm surges impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of storm surges impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of storm surges impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of tornadoes impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of tornadoes impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of tornadoes impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of tornadoes impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of tornadoes impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "dollar damage of tornadoes impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasEndDate
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "has end date" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasKWGEntity
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasKWGEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasKWGEntity> <http://www.w3.org/2000/01/rdf-schema#label> "has KWG entity" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasName
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasNumberOfHouseHolds
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasNumberOfHouseHolds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasNumberOfHouseHolds> <http://www.w3.org/2000/01/rdf-schema#label> "has number of household units" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPopulation
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPopulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPopulation> <http://www.w3.org/2000/01/rdf-schema#label> "has population" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasStartDate
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "has start date" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Apr2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Aug2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Dec2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Feb2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Jan2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Jul2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Jun2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Mar2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-May2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Nov2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Oct2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/2000/01/rdf-schema#label> "maximum monthly temperature in celsius-Sep2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Apr2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Aug2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Dec2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Feb2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Jan2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Jul2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Jun2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Mar2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-May2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Nov2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Oct2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021> <http://www.w3.org/2000/01/rdf-schema#label> "minimum monthly temperature in celsius-Sep2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfDeaths
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfDeaths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfDeaths> <http://www.w3.org/2000/01/rdf-schema#label> "number of deaths" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of earthquakes impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of earthquakes impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of earthquakes impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of earthquakes impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of earthquakes impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of earthquakes impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of fires impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of fires impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of fires impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of fires impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of fires impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of fires impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of floods impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of floods impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of floods impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of floods impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of floods impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of floods impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of hurricanes impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of hurricanes impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of hurricanes impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of hurricanes impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of hurricanes impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of hurricanes impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of landslides impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of landslides impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of landslides impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of landslides impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of landslides impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of landslides impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of storm surges impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of storm surges impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of storm surges impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of storm surges impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of storm surges impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of storm surges impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> <http://www.w3.org/2000/01/rdf-schema#label> "number of tornadoes impacting place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018> <http://www.w3.org/2000/01/rdf-schema#label> "number of tornadoes impacting place-2018" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019> <http://www.w3.org/2000/01/rdf-schema#label> "number of tornadoes impacting place-2019" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020> <http://www.w3.org/2000/01/rdf-schema#label> "number of tornadoes impacting place-2020" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021> <http://www.w3.org/2000/01/rdf-schema#label> "number of tornadoes impacting place-2021" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022> <http://www.w3.org/2000/01/rdf-schema#label> "number of tornadoes impacting place-2022" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentBelowPovertyLine
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentBelowPovertyLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentBelowPovertyLine> <http://www.w3.org/2000/01/rdf-schema#label> "percent below poverty line" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentDiabetic
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentDiabetic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentDiabetic> <http://www.w3.org/2000/01/rdf-schema#label> "percent diabetic" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentObese
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentObese> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentObese> <http://www.w3.org/2000/01/rdf-schema#label> "percent obese" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake> <http://www.w3.org/2000/01/rdf-schema#label> "Earthquake" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire> <http://www.w3.org/2000/01/rdf-schema#label> "Fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> <http://www.w3.org/2000/01/rdf-schema#label> "Fire Type" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard Event" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard Type" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane> <http://www.w3.org/2000/01/rdf-schema#label> "Hurricane" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Place
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> <http://www.w3.org/2000/01/rdf-schema#label> "Place Type" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado> <http://www.w3.org/2000/01/rdf-schema#label> "Tornado" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-0" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-1" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-2" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-3" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-4" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-5" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6> <http://www.w3.org/2000/01/rdf-schema#label> "administrative region level-6" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict> <http://www.w3.org/2000/01/rdf-schema#label> "federal judicial district" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire> <http://www.w3.org/2000/01/rdf-schema#label> "mtbs complex fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire> <http://www.w3.org/2000/01/rdf-schema#label> "mtbs out of area response fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire> <http://www.w3.org/2000/01/rdf-schema#label> "mtbs unknown fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire> <http://www.w3.org/2000/01/rdf-schema#label> "mtbs wildfire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse> <http://www.w3.org/2000/01/rdf-schema#label> "mtbs wildland fire use" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire> <http://www.w3.org/2000/01/rdf-schema#label> "nifc incident complex fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire> <http://www.w3.org/2000/01/rdf-schema#label> "nifc prescribed fire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire> <http://www.w3.org/2000/01/rdf-schema#label> "nifc wildfire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire> <http://www.w3.org/2000/01/rdf-schema#label> "noaa wildfire" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone> <http://www.w3.org/2000/01/rdf-schema#label> "national weather zone" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA> <http://www.w3.org/2000/01/rdf-schema#label> "US census unit" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision> <http://www.w3.org/2000/01/rdf-schema#label> "US climate division" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea> <http://www.w3.org/2000/01/rdf-schema#label> "zip code area" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail> <http://www.w3.org/2000/01/rdf-schema#comment> "hail" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow> <http://www.w3.org/2000/01/rdf-schema#comment> "heavy snow" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind> <http://www.w3.org/2000/01/rdf-schema#comment> "thunderstorm wind" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado> <http://www.w3.org/2000/01/rdf-schema#comment> "tornado" .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1784 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Krysztof Janowicz,\nPascal Hitzler,\nMark Schildhauer,\nDean Rehnberger,\nShirly Stephen,\nCogan Shimizu,\nColby Fisher,\nAntrea Christou,\nAdrita Barua,\nSanaz Saki Norouzi,\nKitty Currier\nAbhilekha Dalal,\nMohammad Saeid Mahdavinejad,\nThomas Thelen,\nAnthony D'Onofrio"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@language" : "en",
+    "@value" : "2023-06-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "The KnowWhereGraph Project"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology supports the KnowWhereGraph Panels application"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KWG-Lite Ontology"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Earthquake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fire"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fire Type"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hazard Event"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hazard Type"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hurricane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Place Type"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tornado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/affectedAreaInAcres",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "affected area in acres"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Apr2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Aug2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Dec2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Feb2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Jan2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Jul2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Jun2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Mar2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-May2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Nov2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Oct2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average cooling degree days per month-Sep2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Apr2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Aug2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Dec2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Feb2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Jan2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Jul2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Jun2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Mar2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-May2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Nov2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Oct2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average heating degree days per month-Sep2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Apr2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Aug2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Dec2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Feb2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Jan2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Jul2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Jun2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Mar2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-May2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Nov2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Oct2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "average monthly temperature in celsius-Sep2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToCropsInDollars",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "damage to crop in dollars"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToInfrastructureInDollars",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "damage to infrstructure in dollars"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of fires impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of fires impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of fires impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of fires impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of fires impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of fires impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of floods impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of floods impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of floods impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of floods impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of floods impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of floods impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of hurricanes impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of hurricanes impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of hurricanes impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of hurricanes impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of hurricanes impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of hurricanes impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of landslides impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of landslides impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of landslides impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of landslides impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of landslides impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of landslides impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of storm surges impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of storm surges impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of storm surges impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of storm surges impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of storm surges impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of storm surges impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of tornadoes impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of tornadoes impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of tornadoes impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of tornadoes impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of tornadoes impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dollar damage of tornadoes impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasEndDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has end date"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasHazardType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has hazard type"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has impacted"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasKWGEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has KWG entity"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has name"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasNumberOfHouseHolds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has number of household units"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPlaceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has place type"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPopulation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasStartDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has start date"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "impacted by"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/isOfFireType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is of fire type"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Apr2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Aug2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Dec2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Feb2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Jan2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Jul2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Jun2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Mar2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-May2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Nov2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Oct2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum monthly temperature in celsius-Sep2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Apr2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Aug2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Dec2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Feb2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Jan2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Jul2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Jun2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Mar2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-May2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Nov2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Oct2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "minimum monthly temperature in celsius-Sep2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfDeaths",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of deaths"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of earthquakes impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of earthquakes impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of earthquakes impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of earthquakes impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of earthquakes impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of earthquakes impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of fires impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of fires impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of fires impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of fires impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of fires impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of fires impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of floods impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of floods impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of floods impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of floods impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of floods impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of floods impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of hurricanes impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of hurricanes impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of hurricanes impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of hurricanes impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of hurricanes impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of hurricanes impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of landslides impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of landslides impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of landslides impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of landslides impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of landslides impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of landslides impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of storm surges impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of storm surges impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of storm surges impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of storm surges impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of storm surges impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of storm surges impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of tornadoes impacting place"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of tornadoes impacting place-2018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of tornadoes impacting place-2019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of tornadoes impacting place-2020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of tornadoes impacting place-2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "number of tornadoes impacting place-2022"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentBelowPovertyLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "percent below poverty line"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentDiabetic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "percent diabetic"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentObese",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "percent obese"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contains"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "intersects"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "overlaps"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "touches"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "within"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "spatial relation"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-0"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-1"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-2"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-3"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-4"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-5"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "administrative region level-6"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "federal judicial district"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mtbs complex fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mtbs out of area response fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mtbs unknown fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mtbs wildfire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mtbs wildland fire use"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nifc incident complex fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nifc prescribed fire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nifc wildfire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "noaa wildfire"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "national weather zone"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "US census unit"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "US climate division"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "zip code area"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "hail"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "heavy snow"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "thunderstorm wind"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "tornado"
+  } ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+}, {
+  "@id" : "http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType" ]
+} ]
